@@ -3,14 +3,25 @@
 
 	&__content {
 		padding: 2.3rem 0;
+
+		@media (max-width: 575.5px) {
+			padding: 0.25rem 0;
+		}
 		h1 {
 			text-transform: uppercase;
 			font-size: 131px;
 			font-weight: 900;
 			letter-spacing: 1rem;
 			line-height: 4rem;
-			margin: 0;
+			margin: 0 auto;
 			padding: 0.65rem 0;
+
+			@media (max-width: 575.5px) {
+				font-size: 18px;
+				letter-spacing: 0.3rem;
+				font-weight: 600;
+				padding: 0;
+			}
 		}
 
 		p {
@@ -20,6 +31,10 @@
 			margin: 0;
 			padding: 1.3rem 0;
 			text-transform: uppercase;
+			@media (max-width: 575.5px) {
+				font-size: 18px;
+				padding: 0;
+			}
 		}
 	}
 

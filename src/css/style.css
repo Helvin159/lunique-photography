@@ -15,9 +15,12 @@
   font-family: var(--global-font); }
 
 body {
-  margin: 0 !important;
-  background-color: var(--variant-three) !important;
-  padding: var(--body-padding-y) var(--body-padding-x) !important; }
+  margin: 0;
+  background-color: var(--variant-three);
+  padding: var(--body-padding-y) var(--body-padding-x); }
+  @media (max-width: 575.5px) {
+    body {
+      padding: 1rem; } }
 
 main {
   background-color: var(--variant-one);
@@ -42,14 +45,27 @@ a {
   max-width: 1250px;
   margin: 0 auto;
   width: 100%; }
+  @media (max-width: 575.5px) {
+    .header {
+      padding: 0.5rem 1.5rem; } }
   .header__content {
     justify-content: space-between; }
+    @media (max-width: 575.5px) {
+      .header__content {
+        justify-content: center; } }
     .header__content__logo {
-      padding: 0; }
+      padding: 0;
+      margin: 0 auto; }
+      @media (max-width: 575.5px) {
+        .header__content__logo {
+          text-align: center; } }
       .header__content__logo h2 {
         font-size: 34px;
         text-transform: uppercase;
         padding: 0; }
+        @media (max-width: 575.5px) {
+          .header__content__logo h2 {
+            font-size: 20px; } }
     .header__content__nav nav ul {
       list-style-type: none;
       padding: 0;
@@ -57,19 +73,31 @@ a {
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: center; }
+    @media (max-width: 575.5px) {
+      .header__content__nav {
+        display: none; } }
 
 .home-hero {
   text-align: center; }
   .home-hero__content {
     padding: 2.3rem 0; }
+    @media (max-width: 575.5px) {
+      .home-hero__content {
+        padding: 0.25rem 0; } }
     .home-hero__content h1 {
       text-transform: uppercase;
       font-size: 131px;
       font-weight: 900;
       letter-spacing: 1rem;
       line-height: 4rem;
-      margin: 0;
+      margin: 0 auto;
       padding: 0.65rem 0; }
+      @media (max-width: 575.5px) {
+        .home-hero__content h1 {
+          font-size: 18px;
+          letter-spacing: 0.3rem;
+          font-weight: 600;
+          padding: 0; } }
     .home-hero__content p {
       font-size: 40px;
       font-weight: 600;
@@ -77,3 +105,7 @@ a {
       margin: 0;
       padding: 1.3rem 0;
       text-transform: uppercase; }
+      @media (max-width: 575.5px) {
+        .home-hero__content p {
+          font-size: 18px;
+          padding: 0; } }

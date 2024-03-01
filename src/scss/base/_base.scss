@@ -4,9 +4,13 @@
 }
 
 body {
-	margin: 0 !important;
-	background-color: var(--variant-three) !important;
-	padding: var(--body-padding-y) var(--body-padding-x) !important;
+	margin: 0;
+	background-color: var(--variant-three);
+	padding: var(--body-padding-y) var(--body-padding-x);
+
+	@media (max-width: 575.5px) {
+		padding: 1rem;
+	}
 }
 
 main {
