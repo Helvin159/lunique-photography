@@ -1,8 +1,17 @@
+import { Route, Routes } from 'react-router-dom';
+import Home from './routes/Home';
+import Outlet from './routes/Outlet';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/style.css';
+
 function App() {
 	return (
-		<div className='App'>
-			<h1>Lunique under Construction</h1>
-		</div>
+		<Routes>
+			<Route path='/' element={<Outlet />}>
+				<Route index element={<Home />} />
+			</Route>
+		</Routes>
 	);
 }
 
