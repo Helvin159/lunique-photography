@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 const HomeHero = () => {
 	return (
 		<Container fluid className='home-hero'>
-			<Container className='home-hero__content'>
+			<Container fluid className='home-hero__content'>
 				<h1>capturing</h1>
 				<p>The moments that captivate your heart</p>
 			</Container>
