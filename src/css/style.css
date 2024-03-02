@@ -73,6 +73,7 @@ a {
           .header__content__logo h2 {
             font-size: 20px; } }
     .header__content__nav nav ul {
+      margin: 0.5rem auto;
       list-style-type: none;
       padding: 0;
       display: flex;
