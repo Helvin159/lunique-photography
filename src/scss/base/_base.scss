@@ -6,10 +6,16 @@
 body {
 	margin: 0;
 	background-color: var(--variant-three);
-	padding: var(--body-padding-y) var(--body-padding-x);
+	padding: 3.7rem;
 
+	@media (max-width: 992px) {
+		padding: 2.7rem;
+	}
+	@media (max-width: 768px) {
+		padding: 1.7rem;
+	}
 	@media (max-width: 575.5px) {
-		padding: 1rem;
+		padding: 1.5rem;
 	}
 }
 

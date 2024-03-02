@@ -10,7 +10,7 @@ const Header = () => {
 				<Col md={5} className='header__content__logo'>
 					<h2>Lunique Photography</h2>
 				</Col>
-				<Col md={4} className='header__content__nav'>
+				<Col md={6} className='header__content__nav'>
 					<nav>
 						<ul>
 							<li>

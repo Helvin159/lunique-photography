@@ -16,9 +16,9 @@
 		}
 		&__logo {
 			padding: 0;
-			margin: 0 auto;
 			@media (max-width: 575.5px) {
 				text-align: center;
+				margin: 0 auto;
 			}
 
 			& h2 {
@@ -38,8 +38,18 @@
 					padding: 0;
 					display: flex;
 					flex-wrap: nowrap;
-					justify-content: space-between;
+					justify-content: space-around;
 					align-items: center;
+
+					& li {
+						& a {
+							border: 1px solid var(--variant-three);
+							border-radius: 25px;
+							padding: 0.6rem 1.6rem;
+							color: var(--variant-three);
+							font-weight: 500;
+						}
+					}
 				}
 			}
 
