@@ -70,13 +70,13 @@ const HomeHero = () => {
 
 			<Container fluid>
 				<Row>
-					<Col md={4}>
+					<Col xs={12} sm={4}>
 						<img src={picTwo} alt='' className='img-fluid mb-2 mb-md-0' />
 					</Col>
-					<Col md={4}>
+					<Col xs={12} sm={4}>
 						<img src={picThree} alt='' className='img-fluid mb-2 mb-md-0' />
 					</Col>
-					<Col md={4}>
+					<Col xs={12} sm={4}>
 						<img src={picfour} alt='' className='img-fluid' />
 					</Col>
 				</Row>
