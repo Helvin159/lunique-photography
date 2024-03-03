@@ -173,10 +173,10 @@ a {
                 font-size: 20px; } }
             .home-hero__about__copy__content__flex-container .container a span.arrow {
               margin: 0 0 0 2rem;
-              vertical-align: middle;
               border-radius: 50%;
               text-align: center;
-              display: inline-block;
+              display: inline-flex;
+              align-items: center;
               font-size: 26px;
               background-color: var(--variant-one);
               color: var(--variant-three);
@@ -187,8 +187,8 @@ a {
                 .home-hero__about__copy__content__flex-container .container a span.arrow {
                   width: 20px;
                   height: 20px;
-                  vertical-align: middle;
-                  margin-right: 0.5rem; } }
+                  font-size: 16px;
+                  vertical-align: middle; } }
     .home-hero__about__copy__img img {
       width: 100%;
       height: 100%;

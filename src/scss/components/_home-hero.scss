@@ -101,10 +101,10 @@
 
 							& span.arrow {
 								margin: 0 0 0 2rem;
-								vertical-align: middle;
 								border-radius: 50%;
 								text-align: center;
-								display: inline-block;
+								display: inline-flex;
+								align-items: center;
 								font-size: 26px;
 								background-color: var(--variant-one);
 								color: var(--variant-three);
@@ -115,8 +115,8 @@
 								@media (max-width: 575.5px) {
 									width: 20px;
 									height: 20px;
+									font-size: 16px;
 									vertical-align: middle;
-									margin-right: 0.5rem;
 								}
 							}
 						}
