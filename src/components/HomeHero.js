@@ -69,7 +69,7 @@ const HomeHero = () => {
 				</Row>
 			</Container>
 
-			<Container fluid className='px-2 px-sm-4'>
+			<Container fluid className='px-2 px-sm-4 pb-5'>
 				<Row>
 					<Col xs={12} sm={4}>
 						<img src={picTwo} alt='' className='img-fluid mb-2 mb-md-0' />
