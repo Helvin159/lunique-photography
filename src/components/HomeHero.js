@@ -11,7 +11,7 @@ import picfour from '../assets/svg/image-4.svg';
 
 const HomeHero = () => {
 	return (
-		<Container fluid className='home-hero'>
+		<Container fluid className='home-hero px-0 px-md-2'>
 			<Container fluid className='home-hero__header'>
 				<h1>capturing</h1>
 				<p>The moments that captivate your heart</p>
@@ -61,14 +61,15 @@ const HomeHero = () => {
 								signature style. Having always been drawn to sociological
 								documentary photography, Amelia applies her classic and
 								energetic style seamlessly to her portraiture and documentary
-								projects .
+								projects.
 							</p>
+							<Link className='d-sm-none'>About Me </Link>
 						</Container>
 					</Col>
 				</Row>
 			</Container>
 
-			<Container fluid>
+			<Container fluid className='px-2 px-sm-4'>
 				<Row>
 					<Col xs={12} sm={4}>
 						<img src={picTwo} alt='' className='img-fluid mb-2 mb-md-0' />

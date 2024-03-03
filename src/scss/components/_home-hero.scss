@@ -7,6 +7,7 @@
 		@media (max-width: 575.5px) {
 			padding: 0.25rem 0;
 		}
+
 		h1 {
 			text-transform: uppercase;
 			font-size: 131px;
@@ -64,6 +65,10 @@
 				padding: 2rem 1rem;
 				text-align: left;
 
+				@media (max-width: 575.5px) {
+					padding: 2rem 0;
+				}
+
 				&__flex-container {
 					display: flex;
 					flex-direction: column;
@@ -90,6 +95,9 @@
 							font-weight: 800;
 							line-height: 42px;
 							text-transform: uppercase;
+							@media (max-width: 575.5px) {
+								font-size: 20px;
+							}
 
 							& span.arrow {
 								margin: 0 0 0 2rem;
@@ -103,6 +111,13 @@
 								width: 38px;
 								height: 38px;
 								transform: rotateZ(-35deg);
+
+								@media (max-width: 575.5px) {
+									width: 20px;
+									height: 20px;
+									vertical-align: middle;
+									margin-right: 0.5rem;
+								}
 							}
 						}
 					}
@@ -136,6 +151,10 @@
 					text-transform: uppercase;
 					padding: 0;
 					margin: 0;
+
+					@media (max-width: 575.5px) {
+						font-size: 36px;
+					}
 				}
 			}
 
@@ -147,6 +166,20 @@
 						font-weight: 500;
 						line-height: 39px;
 						padding-right: 0.25rem;
+
+						@media (max-width: 575.5px) {
+							overflow: hidden;
+							display: -webkit-box;
+							-webkit-line-clamp: 8;
+							-webkit-box-orient: vertical;
+						}
+					}
+
+					& a {
+						color: var(--variant-three);
+						padding: 2rem 0 3rem;
+						font-size: 22px;
+						font-weight: 600;
 					}
 				}
 			}
