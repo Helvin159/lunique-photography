@@ -17,6 +17,11 @@
 		}
 		&__logo {
 			padding: 0;
+
+			& a {
+				text-decoration: none;
+				color: var(--variant-three);
+			}
 			@media (max-width: 575.5px) {
 				text-align: center;
 				margin: 0 auto;

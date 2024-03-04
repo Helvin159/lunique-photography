@@ -26,9 +26,21 @@ const Footer = () => {
 						</Col>
 						<Col md={5}>
 							<ul>
-								<li>LinkedIn</li>
-								<li>Instagram</li>
-								<li>Twitter</li>
+								<li>
+									<a href='linkedin.com' target='_blank' rel='noreferrer'>
+										LinkedIn
+									</a>
+								</li>
+								<li>
+									<a href='instagram.com' target='_blank' rel='noreferrer'>
+										Instagram
+									</a>
+								</li>
+								<li>
+									<a href='x.com' target='_blank' rel='noreferrer'>
+										Twitter
+									</a>
+								</li>
 							</ul>
 						</Col>
 					</Row>

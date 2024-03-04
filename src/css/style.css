@@ -61,6 +61,9 @@ a {
         justify-content: center; } }
     .header__content__logo {
       padding: 0; }
+      .header__content__logo a {
+        text-decoration: none;
+        color: var(--variant-three); }
       @media (max-width: 575.5px) {
         .header__content__logo {
           text-align: center;
@@ -115,6 +118,24 @@ a {
           @media (max-width: 768px) {
             .footer__content__links__container .col-md-5 a {
               font-size: 29px; } }
+        .footer__content__links__container .col-md-5 ul {
+          list-style-type: none;
+          padding: 0; }
+          @media (max-width: 768px) {
+            .footer__content__links__container .col-md-5 ul {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              align-items: center;
+              margin: 0 auto; } }
+          .footer__content__links__container .col-md-5 ul li {
+            text-align: right; }
+            .footer__content__links__container .col-md-5 ul li a {
+              font-size: 20px;
+              text-decoration: none; }
+              .footer__content__links__container .col-md-5 ul li a:hover {
+                text-decoration: underline; }
     .footer__content__statement {
       margin: 0 auto;
       text-align: center;
@@ -330,3 +351,101 @@ a {
       line-height: 39px;
       text-align: right;
       margin: 0; }
+
+.projects {
+  background-color: var(--variant-one);
+  max-width: 1250px;
+  padding: 2rem 0; }
+  .projects__header__content {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; }
+    .projects__header__content__item h2 {
+      font-size: 90px; }
+      @media (max-width: 1216px) {
+        .projects__header__content__item h2 {
+          letter-spacing: 0.4rem; } }
+      @media (max-width: 992px) {
+        .projects__header__content__item h2 {
+          font-size: 92px;
+          letter-spacing: 0.3rem;
+          padding: 0; } }
+      @media (max-width: 768px) {
+        .projects__header__content__item h2 {
+          font-size: 70px;
+          letter-spacing: 0.3rem;
+          padding: 0; } }
+      @media (max-width: 575.5px) {
+        .projects__header__content__item h2 {
+          font-size: 48px;
+          letter-spacing: 0.2rem;
+          font-weight: 700;
+          padding: 0; } }
+    .projects__header__content__item a {
+      text-align: right;
+      font-size: 29px;
+      color: var(--variant-three); }
+  .projects__gallery__first__content__item a {
+    width: 100%;
+    padding: 0;
+    margin: 1rem 0 0 0; }
+    .projects__gallery__first__content__item a img {
+      object-fit: cover;
+      border-radius: 25px;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+      max-height: 434px;
+      -o-object-fit: cover;
+      -o-object-position: center; }
+      @media (max-width: 768px) {
+        .projects__gallery__first__content__item a img {
+          margin: 0.5rem auto;
+          max-height: 300px; } }
+  .projects__gallery__first__content__item__row__content a {
+    margin: 0.5rem 0 0; }
+    .projects__gallery__first__content__item__row__content a img {
+      object-fit: cover;
+      border-radius: 25px;
+      object-position: center;
+      width: 100%;
+      height: 96%;
+      -o-object-fit: cover;
+      -o-object-position: center; }
+      @media (max-width: 768px) {
+        .projects__gallery__first__content__item__row__content a img {
+          height: 300px;
+          margin: 0.5rem auto; } }
+  .projects__gallery__first__content__item.col-md-4 a {
+    height: 100%;
+    padding: 0;
+    margin: 0; }
+    .projects__gallery__first__content__item.col-md-4 a img {
+      object-fit: cover;
+      object-position: center;
+      -o-object-fit: cover;
+      -o-object-position: center;
+      border-radius: 25px;
+      width: 100%;
+      height: 100%;
+      max-height: 999px; }
+      @media (max-width: 768px) {
+        .projects__gallery__first__content__item.col-md-4 a img {
+          max-height: 300px;
+          margin: 0.5rem auto; } }
+  @media (min-width: 768px) {
+    .projects__gallery__second {
+      padding: 1rem 0; } }
+  .projects__gallery__second img {
+    object-fit: cover;
+    border-radius: 25px;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    max-height: 508px;
+    -o-object-fit: cover;
+    -o-object-position: center; }
+    @media (max-width: 768px) {
+      .projects__gallery__second img {
+        max-height: 300px;
+        margin: 0.5rem auto; } }

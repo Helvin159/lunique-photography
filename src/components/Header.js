@@ -8,7 +8,9 @@ const Header = () => {
 		<header className='header'>
 			<Row className='header__content'>
 				<Col md={5} className='header__content__logo'>
-					<h2>Lunique Photography</h2>
+					<h2>
+						<Link to={'/'}>Lunique Photography</Link>
+					</h2>
 				</Col>
 				<Col md={6} className='header__content__nav'>
 					<nav>
@@ -20,7 +22,7 @@ const Header = () => {
 								<Link>Gallery</Link>
 							</li>
 							<li>
-								<Link>Projects</Link>
+								<Link to={'/projects'}>Projects</Link>
 							</li>
 							<li>
 								<Link>Contact</Link>
