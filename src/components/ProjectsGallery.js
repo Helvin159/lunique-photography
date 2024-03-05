@@ -27,7 +27,7 @@ const ProjectsGallery = ({ projects }) => {
 									className='projects__gallery__first__content__item__row__content'>
 									<Link>
 										<img
-											src={`https:${projects.items[0].fields.featuredImage.fields.file.url}`}
+											src={`https:${projects.items[0]?.fields.featuredImage.fields.file.url}`}
 											width={'100%'}
 											alt='Pic one'
 											className='img-fluid'
@@ -51,7 +51,7 @@ const ProjectsGallery = ({ projects }) => {
 							<Link>
 								<img
 									width={'100%'}
-									src={`https:${projects.items[2].fields.featuredImage.fields.file.url}`}
+									src={`https:${projects.items[2]?.fields.featuredImage.fields.file.url}`}
 									alt='Pic one'
 									className='img-fluid'
 								/>
@@ -60,7 +60,7 @@ const ProjectsGallery = ({ projects }) => {
 						<Col md={4} className='projects__gallery__first__content__item'>
 							<Link>
 								<img
-									src={`https:${projects.items[3].fields.featuredImage.fields.file.url}`}
+									src={`https:${projects.items[3]?.fields.featuredImage.fields.file.url}`}
 									alt='Pic one'
 									width={'100%'}
 									className='img-fluid'
@@ -72,7 +72,7 @@ const ProjectsGallery = ({ projects }) => {
 				<Container fluid className='projects__gallery__second'>
 					<Link>
 						<img
-							src={`https:${projects.items[4].fields.featuredImage.fields.file.url}`}
+							src={`https:${projects.items[4]?.fields.featuredImage.fields.file.url}`}
 							alt='Pic one'
 							width={'100%'}
 							className='img-fluid'

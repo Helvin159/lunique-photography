@@ -361,7 +361,8 @@ a {
     align-items: center;
     padding: 1rem; }
     .projects__header__content__item h2 {
-      font-size: 90px; }
+      font-size: 90px;
+      font-weight: 900; }
       @media (max-width: 1216px) {
         .projects__header__content__item h2 {
           letter-spacing: 0.4rem; } }

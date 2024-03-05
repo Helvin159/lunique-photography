@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import wavingHandIcon from '../assets/svg/icon-waving-hand.svg';
+import { FooterMenuContext } from '../context/FooterContext';
 
 const Footer = () => {
+	const { footerLinks } = useContext(FooterMenuContext);
+
+	console.log(footerLinks);
 	return (
 		<footer className='footer'>
 			<Container className='footer__content'>

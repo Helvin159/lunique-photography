@@ -16,7 +16,7 @@ export const ProjectsProvider = ({ children }) => {
 		});
 
 		const projectsRes = await client.getEntries({
-			content_type: process.env.REACT_APP_CONTENTFUL_PROJECT_CONTENT_TYPE,
+			content_type: 'projects',
 		});
 
 		setProjects(projectsRes);
