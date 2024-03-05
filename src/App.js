@@ -29,7 +29,11 @@ function App() {
 				<Route path='/about-me' element={<Home />} />
 				<Route
 					path='/contact'
-					element={<routeComponentRegistry.routeComponent />}
+					element={
+						<routeComponentRegistry.routeComponent
+							components={pages?.items[0].fields.components}
+						/>
+					}
 				/>
 				<Route path='/projects' element={<routeComponentRegistry.projects />} />
 				<Route path='/projects/:slug' element={<Home />} />

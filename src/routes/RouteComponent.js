@@ -6,6 +6,8 @@ import FeaturedWorks from '../components/FeaturedWorks';
 import Hero from '../components/Hero';
 
 const RouteComponent = ({ components }) => {
+	console.log(components);
+
 	const componentRegistry = {
 		loading: Loading,
 		homeHero: HomeHero,
@@ -13,6 +15,8 @@ const RouteComponent = ({ components }) => {
 		projectsGallery: ProjectsGallery,
 		featuredWorks: FeaturedWorks,
 	};
+
+	console.log(componentRegistry);
 	return (
 		<Fragment>
 			<h1>Route Component</h1>

@@ -7,7 +7,6 @@ import { HeaderMenuContext } from '../context/MenuContext';
 const Header = () => {
 	const { headerLinks } = useContext(HeaderMenuContext);
 
-	console.log(headerLinks);
 	return (
 		<header className='header'>
 			<Row className='header__content'>
