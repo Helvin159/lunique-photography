@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect, useState } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { ProjectsContext } from '../context/ProjectsContext';
 import ProjectsGallery from '../components/ProjectsGallery';
 import Loading from '../components/Loading';
