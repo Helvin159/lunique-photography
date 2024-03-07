@@ -1,12 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
-import { HeaderMenuContext } from '../context/MenuContext';
 
 const Header = () => {
-	const { headerLinks } = useContext(HeaderMenuContext);
-
 	return (
 		<header className='header'>
 			<Row className='header__content'>
@@ -18,11 +15,18 @@ const Header = () => {
 				<Col md={6} className='header__content__nav'>
 					<nav>
 						<ul>
-							{headerLinks?.map((i, k) => (
-								<li key={k}>
-									<Link to={`${i.fields.slug}`}>{i.fields.title}</Link>
-								</li>
-							))}
+							<li>
+								<Link to={'/projects'}>Projects</Link>
+							</li>
+							<li>
+								<Link>Gallery</Link>
+							</li>
+							<li>
+								<Link>About</Link>
+							</li>
+							<li>
+								<Link>Contact</Link>
+							</li>
 						</ul>
 					</nav>
 				</Col>
