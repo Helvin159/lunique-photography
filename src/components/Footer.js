@@ -7,16 +7,17 @@ import wavingHandIcon from '../assets/svg/icon-waving-hand.svg';
 import { FooterMenuContext } from '../context/FooterContext';
 
 const Footer = () => {
-	const { footerLinks } = useContext(FooterMenuContext);
+	const { footerSocialMedia, footerStatement, footerContactEmail } =
+		useContext(FooterMenuContext);
 
-	console.log(footerLinks);
+	console.log(footerContactEmail);
 	return (
 		<footer className='footer'>
 			<Container className='footer__content'>
 				<Container className='footer__content__links'>
 					<Row className='footer__content__links__container'>
 						<Col md={5}>
-							<a href='mailto:helvin159@gmail.com'>
+							<a href={`mailto:${footerContactEmail}`}>
 								Say hello
 								<span>
 									<img
@@ -25,32 +26,29 @@ const Footer = () => {
 										className='img-fluid'
 									/>
 								</span>
-								Helvin159@gmail.com
 							</a>
 						</Col>
 						<Col md={5}>
 							<ul>
-								<li>
-									<a href='linkedin.com' target='_blank' rel='noreferrer'>
-										LinkedIn
-									</a>
-								</li>
-								<li>
-									<a href='instagram.com' target='_blank' rel='noreferrer'>
-										Instagram
-									</a>
-								</li>
-								<li>
-									<a href='x.com' target='_blank' rel='noreferrer'>
-										Twitter
-									</a>
-								</li>
+								{footerSocialMedia?.map((i, k) => {
+									console.log(i);
+									return (
+										<li>
+											<a
+												href={`${i.fields.url}`}
+												target='_blank'
+												rel='noreferrer'>
+												{i.fields.platform}
+											</a>
+										</li>
+									);
+								})}
 							</ul>
 						</Col>
 					</Row>
 				</Container>
 				<Container className='footer__content__statement'>
-					<h3>Lunique Photog</h3>
+					<h3>{footerStatement}</h3>
 				</Container>
 			</Container>
 		</footer>

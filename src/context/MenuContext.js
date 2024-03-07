@@ -21,20 +21,14 @@ export const HeaderMenuProvider = ({ children }) => {
 		const menuRes = await client.getEntries({
 			content_type: 'headerMenu',
 		});
-		console.log(menuRes);
 
 		let headerMenu;
-		let footerMenu;
 
 		for (let i = 0; i < menuRes.items.length; i++) {
 			if (menuRes.items[i].fields.isHeader) {
 				headerMenu = menuRes.items[i].fields.links;
-			} else {
-				footerMenu = menuRes.items[i].fields.links;
 			}
 		}
-
-		console.log(footerMenu);
 
 		setHeaderLinks(headerMenu);
 	};

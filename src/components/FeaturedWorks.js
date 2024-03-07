@@ -24,7 +24,7 @@ const FeaturedWorks = ({ projects }) => {
 									className={`featured-works__content__item__copy ${
 										count % 2 === 0 && 'flex-row-reverse'
 									}`}>
-									<Col md={4}>
+									<Col md={9}>
 										<h4>{i.fields.title}</h4>
 									</Col>
 									<Col md={2}>

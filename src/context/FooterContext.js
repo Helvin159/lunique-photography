@@ -2,12 +2,19 @@ import { createContext, useEffect, useState } from 'react';
 import { createClient } from 'contentful';
 
 export const FooterMenuContext = createContext({
-	footerLinks: null,
-	setFooterLinks: () => null,
+	footerComponent: null,
+	setFooterComponent: () => null,
+	footerSocialMedia: null,
+	setFooterSocialMedia: () => null,
+	footerContactEmail: null,
+	setFooterContactEmail: () => null,
 });
 
 export const FooterMenuProvider = ({ children }) => {
-	const [footerLinks, setFooterLinks] = useState(null);
+	const [footerComponent, setFooterComponent] = useState(null);
+	const [footerContactEmail, setFooterContactEmail] = useState(null);
+	const [footerStatement, setFooterStatement] = useState(null);
+	const [footerSocialMedia, setFooterSocialMedia] = useState(null);
 
 	const getFooterMenu = async () => {
 		const client = createClient({
@@ -15,19 +22,33 @@ export const FooterMenuProvider = ({ children }) => {
 			accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_KEY,
 		});
 
-		const menuRes = await client.getEntries({
+		const footerRes = await client.getEntries({
 			content_type: 'footerComponent',
 		});
-		console.log(menuRes);
 
-		setFooterLinks(menuRes);
+		console.log(footerRes);
+
+		setFooterComponent(footerRes);
+
+		setFooterStatement(footerRes.items[0].fields.footerStatement);
+		setFooterContactEmail(footerRes.items[0].fields.emailAddress);
+		setFooterSocialMedia(footerRes.items[0].fields.socialMedia);
 	};
 
 	useEffect(() => {
 		getFooterMenu();
 	}, []);
 
-	const value = { footerLinks, setFooterLinks };
+	const value = {
+		footerComponent,
+		setFooterComponent,
+		footerSocialMedia,
+		setFooterSocialMedia,
+		footerStatement,
+		setFooterStatement,
+		footerContactEmail,
+		setFooterContactEmail,
+	};
 
 	return (
 		<FooterMenuContext.Provider value={value}>
