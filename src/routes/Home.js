@@ -3,11 +3,12 @@ import { ProjectsContext } from '../context/ProjectsContext';
 import HomeHero from '../components/HomeHero';
 import FeaturedWorks from '../components/FeaturedWorks';
 import ProjectsGallery from '../components/ProjectsGallery';
+import Loading from '../components/Loading';
 
 const Home = () => {
 	const { projects } = useContext(ProjectsContext);
 
-	if (!projects) return 'Loading...';
+	if (!projects) return <Loading />;
 
 	if (projects)
 		return (

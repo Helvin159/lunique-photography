@@ -6,6 +6,7 @@ import { HeaderMenuProvider } from './context/MenuContext';
 
 import App from './App';
 import { FooterMenuProvider } from './context/FooterContext';
+import ScrollToTop from './utilities/ScrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,7 +15,9 @@ root.render(
 			<HeaderMenuProvider>
 				<FooterMenuProvider>
 					<ProjectsProvider>
-						<App />
+						<ScrollToTop>
+							<App />
+						</ScrollToTop>
 					</ProjectsProvider>
 				</FooterMenuProvider>
 			</HeaderMenuProvider>

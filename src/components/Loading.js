@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 
 const Loading = () => {
 	return (
-		<Container fluid>
+		<Container fluid className='loading'>
 			<h1>Loading...</h1>
 		</Container>
 	);
