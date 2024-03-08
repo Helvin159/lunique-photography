@@ -1,17 +1,13 @@
 import React, { useContext } from 'react';
+import { PhotographerContext } from '../context/PhotographerContext';
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 
-
-import { PhotographerContext } from '../context/PhotographerContext';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-
 const HomeHero = () => {
 	const { photographer } = useContext(PhotographerContext);
-
-	console.log(photographer);
 
 	return (
 		<Container fluid className='home-hero px-0 px-md-2'>
@@ -29,7 +25,7 @@ const HomeHero = () => {
 								<p>{photographer?.fields.photographyStyle}</p>
 							</Container>
 							<Container>
-								<Link>
+								<Link to={'/about-me'}>
 									About me{' '}
 									<span className='arrow'>
 										<span>&#x2192;</span>
@@ -58,9 +54,9 @@ const HomeHero = () => {
 						lg={7}
 						className='home-hero__about__copy-secondary__copy px-0 px-lg-2'>
 						<Container className='px-0 mx-0'>
-							<div className='px-0 pb-5 px-lg-4'>
-								{documentToReactComponents(photographer?.fields.bio)}
-							</div>
+							<p className='px-0 pb-5 px-lg-4'>
+								{photographer?.fields.bioExcerpt}
+							</p>
 							<Link className='d-sm-none'>About Me </Link>
 						</Container>
 					</Col>

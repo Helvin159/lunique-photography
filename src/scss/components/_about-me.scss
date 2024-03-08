@@ -1,0 +1,20 @@
+.about-hero {
+	background-color: var(--variant-one);
+	padding: 2rem 4rem;
+	max-width: 1250px;
+
+	&__header {
+		padding: 0 0 1.5rem;
+		& h1 {
+			font-size: 90px;
+			text-transform: uppercase;
+			font-weight: 900;
+		}
+	}
+}
+
+.about-body {
+	background-color: var(--variant-one);
+	padding: 0 4rem;
+	max-width: 1250px;
+}

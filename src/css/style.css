@@ -45,6 +45,9 @@ a {
   a:hover {
     text-decoration: none; }
 
+blockquote {
+  padding: 1rem 0 1rem 3rem; }
+
 .header {
   padding: 1.8rem 2.6rem;
   max-width: 1250px;
@@ -81,7 +84,7 @@ a {
       padding: 0;
       display: flex;
       flex-wrap: nowrap;
-      justify-content: space-around;
+      justify-content: space-evenly;
       align-items: center; }
       .header__content__nav nav ul li a {
         border: 1px solid var(--variant-three);
@@ -313,6 +316,22 @@ a {
         padding: 2rem 0 3rem;
         font-size: 22px;
         font-weight: 600; }
+
+.about-hero {
+  background-color: var(--variant-one);
+  padding: 2rem 4rem;
+  max-width: 1250px; }
+  .about-hero__header {
+    padding: 0 0 1.5rem; }
+    .about-hero__header h1 {
+      font-size: 90px;
+      text-transform: uppercase;
+      font-weight: 900; }
+
+.about-body {
+  background-color: var(--variant-one);
+  padding: 0 4rem;
+  max-width: 1250px; }
 
 .featured-works {
   max-width: 1250px;
