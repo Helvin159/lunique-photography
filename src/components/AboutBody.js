@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
