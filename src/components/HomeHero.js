@@ -4,10 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 
-import picOne from '../assets/svg/image-1.png';
-import picTwo from '../assets/svg/image-2.svg';
-import picThree from '../assets/svg/image-3.svg';
-import picfour from '../assets/svg/image-4.svg';
+
 import { PhotographerContext } from '../context/PhotographerContext';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
