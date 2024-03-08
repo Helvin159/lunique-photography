@@ -26,7 +26,7 @@ const AboutBody = ({ photographer }) => {
 								<img
 									src={`https:${i?.fields.file.url}`}
 									alt={i?.fields.fileName}
-									className='img-fluid mb-2 mb-md-0'
+									className='img-fluid my-2 mx-auto'
 								/>
 							</Col>
 						);
