@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,13 +8,19 @@ import picOne from '../assets/svg/image-1.png';
 import picTwo from '../assets/svg/image-2.svg';
 import picThree from '../assets/svg/image-3.svg';
 import picfour from '../assets/svg/image-4.svg';
+import { PhotographerContext } from '../context/PhotographerContext';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const HomeHero = () => {
+	const { photographer } = useContext(PhotographerContext);
+
+	console.log(photographer);
+
 	return (
 		<Container fluid className='home-hero px-0 px-md-2'>
 			<Container fluid className='home-hero__header'>
-				<h1>capturing</h1>
-				<p>The moments that captivate your heart</p>
+				<h1>{photographer?.fields.headline}</h1>
+				<p>{photographer?.fields.subHeadline}</p>
 			</Container>
 			<Container fluid className='home-hero__about'>
 				<Row className='flex-column-reverse flex-lg-row home-hero__about__copy'>
@@ -23,10 +29,7 @@ const HomeHero = () => {
 							fluid
 							className='home-hero__about__copy__content__flex-container'>
 							<Container>
-								<p>
-									Amelia Allen is a lifestyle, portrait and documentary
-									photographer from Somerset who now lives and works in London.
-								</p>
+								<p>{photographer?.fields.photographyStyle}</p>
 							</Container>
 							<Container>
 								<Link>
@@ -41,7 +44,11 @@ const HomeHero = () => {
 					<Col
 						lg={7}
 						className='home-hero__about__img mb-3 mb-lg-0 px-0 px-lg-2'>
-						<img className='img-fluid' src={picOne} alt='picone' />
+						<img
+							className='img-fluid'
+							src={`https:${photographer?.fields?.proPhoto?.fields?.file?.url}`}
+							alt='picone'
+						/>
 					</Col>
 				</Row>
 				<Row className='home-hero__about__copy-secondary pt-5'>
@@ -54,15 +61,9 @@ const HomeHero = () => {
 						lg={7}
 						className='home-hero__about__copy-secondary__copy px-0 px-lg-2'>
 						<Container className='px-0 mx-0'>
-							<p className='px-0 px-lg-4'>
-								Starting her career in fashion photography at the age of 18, it
-								was on the sets of high end brand campaigns and fashion shows
-								that Amelia learnt the technicalities of what has become her
-								signature style. Having always been drawn to sociological
-								documentary photography, Amelia applies her classic and
-								energetic style seamlessly to her portraiture and documentary
-								projects.
-							</p>
+							<div className='px-0 pb-5 px-lg-4'>
+								{documentToReactComponents(photographer?.fields.bio)}
+							</div>
 							<Link className='d-sm-none'>About Me </Link>
 						</Container>
 					</Col>
@@ -71,15 +72,17 @@ const HomeHero = () => {
 
 			<Container fluid className='px-2 px-sm-4 pb-5'>
 				<Row>
-					<Col xs={12} sm={4}>
-						<img src={picTwo} alt='' className='img-fluid mb-2 mb-md-0' />
-					</Col>
-					<Col xs={12} sm={4}>
-						<img src={picThree} alt='' className='img-fluid mb-2 mb-md-0' />
-					</Col>
-					<Col xs={12} sm={4}>
-						<img src={picfour} alt='' className='img-fluid' />
-					</Col>
+					{photographer?.fields?.favoriteShots?.slice(0, 3).map((i, k) => {
+						return (
+							<Col xs={12} sm={4}>
+								<img
+									src={`https:${i?.fields.file.url}`}
+									alt={i?.fields.fileName}
+									className='img-fluid mb-2 mb-md-0'
+								/>
+							</Col>
+						);
+					})}
 				</Row>
 			</Container>
 		</Container>

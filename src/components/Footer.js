@@ -10,7 +10,6 @@ const Footer = () => {
 	const { footerSocialMedia, footerStatement, footerContactEmail } =
 		useContext(FooterMenuContext);
 
-	console.log(footerContactEmail);
 	return (
 		<footer className='footer'>
 			<Container className='footer__content'>
@@ -31,9 +30,8 @@ const Footer = () => {
 						<Col md={5}>
 							<ul>
 								{footerSocialMedia?.map((i, k) => {
-									console.log(i);
 									return (
-										<li>
+										<li key={k}>
 											<a
 												href={`${i.fields.url}`}
 												target='_blank'
