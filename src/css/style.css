@@ -406,6 +406,24 @@ blockquote {
       text-align: right;
       font-size: 29px;
       color: var(--variant-three); }
+      .projects__header__content__item a span.arrow {
+        margin: 0 0 0 0.8rem;
+        border-radius: 50%;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        font-size: 26px;
+        background-color: var(--variant-three);
+        color: var(--variant-one);
+        width: 38px;
+        height: 38px;
+        transform: rotateZ(-35deg); }
+        @media (max-width: 575.5px) {
+          .projects__header__content__item a span.arrow {
+            width: 20px;
+            height: 20px;
+            font-size: 16px;
+            vertical-align: middle; } }
   .projects__gallery__first__content__item a {
     width: 100%;
     padding: 0;

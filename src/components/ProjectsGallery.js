@@ -69,7 +69,12 @@ const ProjectsGallery = ({ projects }) => {
 						</Col>
 						{pathname === '/' && (
 							<Col sm={4} className='projects__header__content__item text-end'>
-								<Link to={'/projects'}>Show all</Link>
+								<Link to={'/projects'}>
+									Show all{' '}
+									<span className='arrow'>
+										<span>&#x2192;</span>
+									</span>
+								</Link>
 							</Col>
 						)}
 					</Row>
