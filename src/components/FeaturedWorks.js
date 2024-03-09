@@ -7,7 +7,7 @@ const FeaturedWorks = ({ projects }) => {
 	let count = 1;
 
 	return (
-		<Container fluid className='featured-works'>
+		<Container as='section' fluid className='featured-works'>
 			<Container className='featured-works__header'>
 				<h3>Featured Works</h3>
 			</Container>

@@ -12,7 +12,7 @@ const Header = () => {
 						<Link to={'/'}>Lunique Photography</Link>
 					</h2>
 				</Col>
-				<Col md={6} className='header__content__nav'>
+				<Col md={5} className='header__content__nav'>
 					<nav>
 						<ul>
 							<li>
@@ -24,8 +24,8 @@ const Header = () => {
 							<li>
 								<Link to={'/about-me'}>About</Link>
 							</li>
-							<li to={'/contact'}>
-								<Link>Contact</Link>
+							<li>
+								<Link to={'/contact'}>Contact</Link>
 							</li>
 						</ul>
 					</nav>

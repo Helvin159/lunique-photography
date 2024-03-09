@@ -10,7 +10,7 @@ const HomeHero = () => {
 	const { photographer } = useContext(PhotographerContext);
 
 	return (
-		<Container fluid className='home-hero px-0 px-md-2'>
+		<Container as='section' fluid className='home-hero px-0 px-md-2'>
 			<Container fluid className='home-hero__header'>
 				<h1>{photographer?.fields.headline}</h1>
 				<p>{photographer?.fields.subHeadline}</p>

@@ -26,8 +26,6 @@ export const FooterMenuProvider = ({ children }) => {
 			content_type: 'footerComponent',
 		});
 
-		console.log(footerRes);
-
 		setFooterComponent(footerRes);
 
 		setFooterStatement(footerRes.items[0].fields.footerStatement);

@@ -1,0 +1,79 @@
+.contact-form {
+	background-color: var(--variant-one);
+	max-width: 1250px;
+
+	&__content {
+		margin: 0 auto;
+
+		&__form,
+		& form {
+			margin: 0 auto;
+			width: 860px;
+
+			&__group {
+				width: 85%;
+				padding: 0.75rem 0;
+				margin: 0 auto;
+				& label {
+					display: block;
+					font-size: 20px;
+					font-weight: 600;
+					width: 70%;
+					margin: 0 auto;
+					text-transform: capitalize;
+					padding: 0.25rem 0;
+				}
+				& input {
+					display: block;
+					margin: 0 auto;
+					padding: 0.85rem;
+					border-radius: 5px;
+					outline: none;
+					border: none;
+					width: 70%;
+					box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+				}
+
+				& textarea {
+					display: block;
+					padding: 0.85rem;
+					margin: 0 auto;
+					border-radius: 5px;
+					outline: none;
+					border: none;
+					width: 70%;
+					box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+					min-height: 160px;
+				}
+			}
+		}
+
+		&__submit-btn {
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			padding: 1rem 0;
+
+			& button,
+			& .btn {
+				width: 46.25%;
+				text-transform: capitalize;
+				font-size: 24px;
+				padding: 0.5rem;
+				background-color: var(--variant-three);
+				color: var(--variant-one);
+				border: 1px solid var(--variant-one);
+				outline: var(--variant-one);
+
+				&:active,
+				&:focus,
+				&:hover {
+					background-color: var(--variant-three);
+					border: 1px solid var(--variant-one);
+					color: var(--variant-one);
+					outline: var(--variant-one);
+				}
+			}
+		}
+	}
+}

@@ -30,7 +30,8 @@ body {
 
 main {
   margin: 0 auto;
-  max-width: 1250px; }
+  max-width: 1250px;
+  scroll-behavior: smooth; }
 
 h1,
 h2,
@@ -505,3 +506,84 @@ blockquote {
     font-size: 100px;
     font-weight: 900;
     color: var(--variant-one); }
+
+.generic-hero {
+  background-color: var(--variant-one);
+  color: var(--variant-three);
+  padding: 2.5rem 0;
+  text-align: center; }
+  .generic-hero h1 {
+    font-size: 100px;
+    font-weight: 900;
+    text-transform: uppercase; }
+  .generic-hero p {
+    font-size: 24px;
+    margin: 0 auto; }
+
+.contact-form {
+  background-color: var(--variant-one);
+  max-width: 1250px; }
+  .contact-form__content {
+    margin: 0 auto; }
+    .contact-form__content__form,
+    .contact-form__content form {
+      margin: 0 auto;
+      width: 860px; }
+      .contact-form__content__form__group,
+      .contact-form__content form__group {
+        width: 85%;
+        padding: 0.75rem 0;
+        margin: 0 auto; }
+        .contact-form__content__form__group label,
+        .contact-form__content form__group label {
+          display: block;
+          font-size: 20px;
+          font-weight: 600;
+          width: 70%;
+          margin: 0 auto;
+          text-transform: capitalize;
+          padding: 0.25rem 0; }
+        .contact-form__content__form__group input,
+        .contact-form__content form__group input {
+          display: block;
+          margin: 0 auto;
+          padding: 0.85rem;
+          border-radius: 5px;
+          outline: none;
+          border: none;
+          width: 70%;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); }
+        .contact-form__content__form__group textarea,
+        .contact-form__content form__group textarea {
+          display: block;
+          padding: 0.85rem;
+          margin: 0 auto;
+          border-radius: 5px;
+          outline: none;
+          border: none;
+          width: 70%;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+          min-height: 160px; }
+    .contact-form__content__submit-btn {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 1rem 0; }
+      .contact-form__content__submit-btn button,
+      .contact-form__content__submit-btn .btn {
+        width: 46.25%;
+        text-transform: capitalize;
+        font-size: 24px;
+        padding: 0.5rem;
+        background-color: var(--variant-three);
+        color: var(--variant-one);
+        border: 1px solid var(--variant-one);
+        outline: var(--variant-one); }
+        .contact-form__content__submit-btn button:active, .contact-form__content__submit-btn button:focus, .contact-form__content__submit-btn button:hover,
+        .contact-form__content__submit-btn .btn:active,
+        .contact-form__content__submit-btn .btn:focus,
+        .contact-form__content__submit-btn .btn:hover {
+          background-color: var(--variant-three);
+          border: 1px solid var(--variant-one);
+          color: var(--variant-one);
+          outline: var(--variant-one); }

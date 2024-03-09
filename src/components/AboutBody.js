@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const AboutBody = ({ photographer }) => {
 	return (
-		<Container fluid className='about-body'>
+		<Container as='section' fluid className='about-body'>
 			<Row className='home-hero__about__copy-secondary pt-5'>
 				<Col
 					lg={12}
@@ -22,7 +22,7 @@ const AboutBody = ({ photographer }) => {
 				<Row>
 					{photographer?.fields?.favoriteShots?.map((i, k) => {
 						return (
-							<Col xs={12} sm={4}>
+							<Col xs={12} sm={4} key={k}>
 								<img
 									src={`https:${i?.fields.file.url}`}
 									alt={i?.fields.fileName}

@@ -10,7 +10,6 @@ const Home = () => {
 	const { projects } = useContext(ProjectsContext);
 	const { photographer } = useContext(PhotographerContext);
 
-	console.log(photographer);
 	if (!projects) return <Loading />;
 
 	if (projects)

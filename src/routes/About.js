@@ -1,13 +1,15 @@
 import React, { Fragment, useContext } from 'react';
 import { PhotographerContext } from '../context/PhotographerContext';
-import AboutHero from '../components/AboutHero';
+import AboutIntro from '../components/AboutIntro';
 import AboutBody from '../components/AboutBody';
+import GenericHero from '../components/GenericHero';
 
 const About = () => {
 	const { photographer } = useContext(PhotographerContext);
 	return (
 		<Fragment>
-			<AboutHero photographer={photographer} />
+			<GenericHero heading={'About me'} subHeading={' '} />
+			<AboutIntro photographer={photographer} />
 			<AboutBody photographer={photographer} />
 		</Fragment>
 	);

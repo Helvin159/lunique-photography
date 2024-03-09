@@ -24,8 +24,6 @@ export const PhotographerProvider = ({ children }) => {
 		getPhotographer();
 	}, []);
 
-	console.log(photographer);
-
 	const value = { photographer, setPhotographer };
 	return (
 		<PhotographerContext.Provider value={value}>

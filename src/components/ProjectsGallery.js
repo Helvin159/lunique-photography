@@ -61,12 +61,14 @@ const ProjectsGallery = ({ projects }) => {
 
 	if (projects)
 		return (
-			<Container fluid className='projects'>
+			<Container as='section' fluid className='projects'>
 				<Container fluid className='projects__header'>
 					<Row className='projects__header__content'>
-						<Col sm={6} className='projects__header__content__item'>
-							<h2>Projects</h2>
-						</Col>
+						{pathname === '/' && (
+							<Col sm={6} className='projects__header__content__item'>
+								<h2>Projects</h2>
+							</Col>
+						)}
 						{pathname === '/' && (
 							<Col sm={4} className='projects__header__content__item text-end'>
 								<Link to={'/projects'}>

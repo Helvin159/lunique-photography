@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import GenericHero from '../components/GenericHero';
 
 const Project = () => {
-	return <div>Project</div>;
+	return (
+		<Fragment>
+			<GenericHero heading={'Projects'} subHeading={''} />
+		</Fragment>
+	);
 };
 
 export default Project;

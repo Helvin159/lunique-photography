@@ -4,16 +4,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const AboutHero = ({ photographer }) => {
+const AboutIntro = ({ photographer }) => {
 	const { pathname } = useLocation();
 
 	useEffect(() => {}, [pathname]);
 
 	return (
 		<Container fluid className='about-hero'>
-			<Container className='about-hero__header'>
-				<h1>About me</h1>
-			</Container>
 			<Row className='flex-column-reverse flex-lg-row home-hero__about__copy'>
 				<Col lg={5} className='home-hero__about__copy__content'>
 					<Container
@@ -46,4 +43,4 @@ const AboutHero = ({ photographer }) => {
 	);
 };
 
-export default AboutHero;
+export default AboutIntro;

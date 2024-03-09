@@ -1,0 +1,17 @@
+.generic-hero {
+	background-color: var(--variant-one);
+	color: var(--variant-three);
+	padding: 2.5rem 0;
+	text-align: center;
+
+	& h1 {
+		font-size: 100px;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+
+	& p {
+		font-size: 24px;
+		margin: 0 auto;
+	}
+}
