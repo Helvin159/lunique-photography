@@ -51,11 +51,7 @@
 
 					& li {
 						& a {
-							border: 1px solid var(--variant-three);
-							border-radius: 25px;
-							padding: 0.6rem 1.6rem;
-							color: var(--variant-three);
-							font-weight: 500;
+							@include primary-btn;
 						}
 					}
 				}
@@ -74,36 +70,7 @@
 
 		& button,
 		& .btn {
-			background-color: transparent;
-			border: transparent;
-			outline: 0;
-			position: absolute;
-			top: 1.67rem;
-			right: 0.5rem;
-
-			@media (max-width: 575.5px) {
-				top: 0;
-			}
-			@media (max-width: 400px) {
-				right: -5px;
-			}
-
-			& img {
-				width: 30px;
-
-				@media (max-width: 575.5px) {
-				}
-
-				width: 24px;
-			}
-
-			&:active,
-			&:focus,
-			&:hover {
-				background-color: transparent;
-				border: transparent;
-				outline: 0;
-			}
+			@include hamburger-btn;
 		}
 	}
 }

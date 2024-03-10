@@ -217,4 +217,21 @@
 			}
 		}
 	}
+
+	&__page-btns {
+		& button,
+		& .btn {
+			@include primary-btn;
+		}
+
+		& .number-btns {
+			@include primary-btn;
+
+			border: transparent;
+
+			&.active-page {
+				border: 1px solid var(--variant-three);
+			}
+		}
+	}
 }

@@ -181,19 +181,21 @@ const ProjectsGallery = ({ projects }) => {
 				</Container>
 
 				{pathname !== '/' && (
-					<Container fluid className='text-center'>
-						{currentPage > 1 && <Button onClick={prevPage}>prev Page</Button>}
+					<Container fluid className='projects__page-btns text-center'>
+						{currentPage > 1 && <Button onClick={prevPage}>Previous</Button>}
 						{pageNums.map((i, k) => (
 							<Button
 								onClick={() => switchByPageNum(parseInt(i))}
 								value={parseInt(i)}
-								className={`${i === currentPage ? 'active-page' : ''} mx-1`}
+								className={`number-btns ${
+									i === currentPage ? 'active-page' : ''
+								} mx-1`}
 								key={k}>
 								{i}
 							</Button>
 						))}
 						{currentPage < totalPages && (
-							<Button onClick={nextPage}>next Page</Button>
+							<Button onClick={nextPage}>Next</Button>
 						)}
 					</Container>
 				)}

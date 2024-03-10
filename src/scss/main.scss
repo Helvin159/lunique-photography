@@ -18,6 +18,11 @@
 	--body-padding-y: 3rem;
 }
 
+// Mixins
+@import './mixins/buttons';
+@import './mixins/heading-queries';
+@import './mixins/inputs';
+
 // Base
 @import './base/base';
 

@@ -8,6 +8,7 @@
 		&__links {
 			&__container {
 				justify-content: space-between;
+				align-items: center;
 
 				@media (max-width: 768px) {
 					flex-direction: column-reverse;
@@ -16,13 +17,22 @@
 					padding: 1rem 0;
 
 					&:hover {
-						text-decoration: underline;
+						text-decoration: none;
 					}
 					& a {
 						font-size: 51px;
 						color: var(--variant-three);
 						text-decoration: none;
+
+						font-weight: 900;
+						margin: 0 auto 0.75rem;
 						cursor: pointer;
+						@include heading-three-queries;
+
+						@media (max-width: 768px) {
+							display: block;
+							text-align: center;
+						}
 
 						& span {
 							& img {
@@ -50,13 +60,54 @@
 							text-align: right;
 
 							& a {
-								font-size: 20px;
+								font-size: 22px;
 								text-decoration: none;
 
 								&:hover {
 									text-decoration: underline;
 								}
 							}
+						}
+					}
+
+					& h3 {
+						@include heading-three-queries;
+						font-weight: 900;
+						@media (max-width: 768px) {
+							text-align: center;
+						}
+					}
+
+					& form {
+						padding: 0;
+						margin: 0;
+						width: auto;
+						& input {
+							@include text-input;
+							margin: 0 0 1rem;
+
+							@media (max-width: 768px) {
+								margin: 0 auto 1rem;
+							}
+						}
+
+						& textarea {
+							@include textarea-input;
+
+							margin: 0.5rem 0 0;
+							height: 100%;
+							min-height: 100px;
+
+							@media (max-width: 768px) {
+								margin: 0 auto 1rem;
+							}
+						}
+
+						& button,
+						& .btn {
+							@include primary-btn;
+							margin: 1rem auto 0;
+							width: 70%;
 						}
 					}
 				}

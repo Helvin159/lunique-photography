@@ -57,13 +57,12 @@ const HomeHero = () => {
 							<p className='px-0 pb-5 px-lg-4'>
 								{photographer?.fields.bioExcerpt}
 							</p>
-							<Link className='d-sm-none'>About Me </Link>
 						</Container>
 					</Col>
 				</Row>
 			</Container>
 
-			<Container fluid className='px-2 px-sm-4 pb-5'>
+			<Container fluid className='home-hero__fav-pics px-2 px-sm-4 pb-5'>
 				<Row>
 					{photographer?.fields?.favoriteShots?.slice(0, 3).map((i, k) => {
 						return (
