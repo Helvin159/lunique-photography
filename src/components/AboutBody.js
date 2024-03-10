@@ -1,7 +1,10 @@
 import React from 'react';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import ImageSlider from './ImageSlider';
 
 const AboutBody = ({ photographer }) => {
 	return (
@@ -18,20 +21,8 @@ const AboutBody = ({ photographer }) => {
 					</Container>
 				</Col>
 			</Row>
-			<Container fluid className='px-2 px-sm-4 pb-5'>
-				<Row>
-					{photographer?.fields?.favoriteShots?.map((i, k) => {
-						return (
-							<Col xs={12} sm={4} key={k}>
-								<img
-									src={`https:${i?.fields.file.url}`}
-									alt={i?.fields.fileName}
-									className='img-fluid my-2 mx-auto'
-								/>
-							</Col>
-						);
-					})}
-				</Row>
+			<Container fluid>
+				<ImageSlider pictures={photographer?.fields?.favoriteShots} />
 			</Container>
 		</Container>
 	);
