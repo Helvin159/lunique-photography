@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { PhotographerProvider } from './context/PhotographerContext';
 import { ProjectsProvider } from './context/ProjectsContext';
-import { HeaderMenuProvider } from './context/MenuContext';
+import { HeaderMenuProvider } from './context/HeaderMenuContext';
 import { FooterMenuProvider } from './context/FooterContext';
 import ScrollToTop from './utilities/ScrollToTop';
 

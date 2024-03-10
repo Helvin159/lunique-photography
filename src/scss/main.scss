@@ -10,6 +10,7 @@
 	// Colors
 	--variant-one: #cfc1ae;
 	--variant-two: #141414;
+	--variant-two-light: rgb(20, 20, 20, 0.8);
 	--variant-three: #000000;
 
 	// Sizing
@@ -30,3 +31,4 @@
 @import './components/loading';
 @import './components/generic-hero';
 @import './components/contact-form';
+@import './components/mobile-nav';

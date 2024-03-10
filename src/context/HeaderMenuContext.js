@@ -9,7 +9,7 @@ export const HeaderMenuContext = createContext({
 });
 
 export const HeaderMenuProvider = ({ children }) => {
-	const [menuIsOpen, setMenuIsOpen] = useState(false);
+	const [menuIsOpen, setMenuIsOpen] = useState(true);
 	const [headerLinks, setHeaderLinks] = useState(null);
 
 	const getMenu = async () => {

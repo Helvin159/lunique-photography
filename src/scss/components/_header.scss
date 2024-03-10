@@ -4,6 +4,7 @@
 	margin: 0 auto;
 	width: 100%;
 	background-color: var(--variant-one);
+	position: relative;
 
 	@media (max-width: 575.5px) {
 		padding: 0.5rem 1.5rem;
@@ -60,8 +61,48 @@
 				}
 			}
 
-			@media (max-width: 575.5px) {
+			@media (max-width: 768px) {
 				display: none;
+			}
+		}
+	}
+
+	&__open-mobile-nav {
+		@media (min-width: 768px) {
+			display: none;
+		}
+
+		& button,
+		& .btn {
+			background-color: transparent;
+			border: transparent;
+			outline: 0;
+			position: absolute;
+			top: 1.67rem;
+			right: 0.5rem;
+
+			@media (max-width: 575.5px) {
+				top: 0;
+			}
+			@media (max-width: 400px) {
+				right: -5px;
+			}
+
+			& img {
+				width: 30px;
+
+				@media (max-width: 575.5px) {
+				}
+
+				width: 24px;
+			}
+
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: transparent;
+				border: transparent;
+				outline: 0;
 			}
 		}
 	}
