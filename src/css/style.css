@@ -268,21 +268,21 @@ blockquote {
                 margin: 0 auto 1rem; } }
           .footer__content__links__container .col-md-5 form button,
           .footer__content__links__container .col-md-5 form .btn {
-            border: 1px solid var(--variant-three);
+            color: var(--variant-one);
+            border: 1px solid var(--variant-one);
+            background-color: var(--variant-two);
             border-radius: 25px;
             padding: 0.6rem 1.6rem;
-            color: var(--variant-three);
             font-weight: 500;
-            background-color: var(--variant-one);
             transition: 0.2s ease-in;
             margin: 1rem auto 0;
             width: 70%; }
             .footer__content__links__container .col-md-5 form button:hover, .footer__content__links__container .col-md-5 form button:active,
             .footer__content__links__container .col-md-5 form .btn:hover,
             .footer__content__links__container .col-md-5 form .btn:active {
-              background-color: var(--variant-two);
-              color: var(--variant-one);
-              border: 1px solid var(--variant-two); }
+              background-color: var(--variant-one);
+              border: 1px solid var(--variant-two);
+              color: var(--variant-two); }
             .footer__content__links__container .col-md-5 form button:active,
             .footer__content__links__container .col-md-5 form .btn:active {
               transform: scale(0.99);

@@ -55,3 +55,27 @@
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 	}
 }
+@mixin primary-btn-dark {
+	color: var(--variant-one);
+	border: 1px solid var(--variant-one);
+	background-color: var(--variant-two);
+	border-radius: 25px;
+	padding: 0.6rem 1.6rem;
+	font-weight: 500;
+	transition: 0.2s ease-in;
+
+	&:hover,
+	&:active {
+		background-color: var(--variant-one);
+		border: 1px solid var(--variant-two);
+		color: var(--variant-two);
+		// box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+	}
+
+	&:active {
+		transform: scale(0.99);
+		border: 1px solid var(--variant-two);
+		outline: 0;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+	}
+}

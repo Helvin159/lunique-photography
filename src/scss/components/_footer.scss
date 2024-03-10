@@ -105,7 +105,7 @@
 
 						& button,
 						& .btn {
-							@include primary-btn;
+							@include primary-btn-dark;
 							margin: 1rem auto 0;
 							width: 70%;
 						}
