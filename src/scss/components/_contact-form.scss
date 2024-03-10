@@ -57,7 +57,7 @@
 
 			& button,
 			& .btn {
-				@include primary-btn;
+				@include primary-btn-dark;
 				width: 100%;
 				max-width: 31.98rem;
 			}

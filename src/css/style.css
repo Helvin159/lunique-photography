@@ -844,21 +844,21 @@ blockquote {
       padding: 1rem 0; }
       .contact-form__content__submit-btn button,
       .contact-form__content__submit-btn .btn {
-        border: 1px solid var(--variant-three);
+        color: var(--variant-one);
+        border: 1px solid var(--variant-one);
+        background-color: var(--variant-two);
         border-radius: 25px;
         padding: 0.6rem 1.6rem;
-        color: var(--variant-three);
         font-weight: 500;
-        background-color: var(--variant-one);
         transition: 0.2s ease-in;
         width: 100%;
         max-width: 31.98rem; }
         .contact-form__content__submit-btn button:hover, .contact-form__content__submit-btn button:active,
         .contact-form__content__submit-btn .btn:hover,
         .contact-form__content__submit-btn .btn:active {
-          background-color: var(--variant-two);
-          color: var(--variant-one);
-          border: 1px solid var(--variant-two); }
+          background-color: var(--variant-one);
+          border: 1px solid var(--variant-two);
+          color: var(--variant-two); }
         .contact-form__content__submit-btn button:active,
         .contact-form__content__submit-btn .btn:active {
           transform: scale(0.99);
