@@ -7,9 +7,9 @@ import MobileNav from '../components/MobileNav';
 const Outlet = () => {
 	return (
 		<Fragment>
+			<MobileNav />
 			<main>
 				<Header />
-				<MobileNav />
 				<Layout />
 				<Footer />
 			</main>

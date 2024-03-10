@@ -67,7 +67,7 @@ const HomeHero = () => {
 				<Row>
 					{photographer?.fields?.favoriteShots?.slice(0, 3).map((i, k) => {
 						return (
-							<Col xs={12} sm={4}>
+							<Col xs={12} sm={4} key={k}>
 								<img
 									src={`https:${i?.fields.file.url}`}
 									alt={i?.fields.fileName}

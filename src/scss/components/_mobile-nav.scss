@@ -16,6 +16,8 @@
 	align-items: center;
 	transition: opacity 0.15s ease-in;
 
+	z-index: 1;
+
 	&.show {
 		@media (max-width: 768px) {
 			visibility: visible;
@@ -39,8 +41,10 @@
 			& a {
 				text-decoration: none;
 				color: var(--variant-one);
-				font-size: 30px;
+				font-size: 38px;
 				font-weight: 900;
+				text-transform: uppercase;
+				line-height: 4.5rem;
 			}
 		}
 	}
@@ -55,6 +59,7 @@
 			border: transparent;
 			outline: 0;
 			font-size: 2.2rem;
+			color: var(--variant-one);
 
 			&:hover,
 			&:active,

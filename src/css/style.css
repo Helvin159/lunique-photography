@@ -553,6 +553,25 @@ blockquote {
     font-size: 100px;
     font-weight: 900;
     text-transform: uppercase; }
+    @media (max-width: 1216px) {
+      .generic-hero h1 {
+        letter-spacing: 0.4rem; } }
+    @media (max-width: 992px) {
+      .generic-hero h1 {
+        font-size: 92px;
+        letter-spacing: 0.3rem;
+        padding: 0; } }
+    @media (max-width: 768px) {
+      .generic-hero h1 {
+        font-size: 70px;
+        letter-spacing: 0.3rem;
+        padding: 0; } }
+    @media (max-width: 575.5px) {
+      .generic-hero h1 {
+        font-size: 48px;
+        letter-spacing: 0.2rem;
+        font-weight: 700;
+        padding: 0; } }
   .generic-hero p {
     font-size: 24px;
     margin: 0 auto; }
@@ -565,7 +584,8 @@ blockquote {
     .contact-form__content__form,
     .contact-form__content form {
       margin: 0 auto;
-      width: 860px; }
+      max-width: 860px;
+      width: 100%; }
       .contact-form__content__form__group,
       .contact-form__content form__group {
         width: 85%;
@@ -639,7 +659,8 @@ blockquote {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.15s ease-in; }
+  transition: opacity 0.15s ease-in;
+  z-index: 1; }
   @media (max-width: 768px) {
     .mobile-nav.show {
       visibility: visible;
@@ -659,8 +680,10 @@ blockquote {
       .mobile-nav ul li a {
         text-decoration: none;
         color: var(--variant-one);
-        font-size: 30px;
-        font-weight: 900; }
+        font-size: 38px;
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 4.5rem; }
   .mobile-nav__close-btn {
     position: absolute;
     top: 1rem;
@@ -669,7 +692,8 @@ blockquote {
       background-color: transparent;
       border: transparent;
       outline: 0;
-      font-size: 2.2rem; }
+      font-size: 2.2rem;
+      color: var(--variant-one); }
       .mobile-nav__close-btn.btn:hover, .mobile-nav__close-btn.btn:active, .mobile-nav__close-btn.btn:focus {
         background-color: transparent;
         outline: 0;

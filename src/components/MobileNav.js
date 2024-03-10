@@ -14,8 +14,9 @@ const MobileNav = () => {
 			setMenuIsOpen(!menuIsOpen);
 		}
 	};
+
 	return (
-		<Container as='nav' className={`mobile-nav ${menuIsOpen ? 'show' : ''}`}>
+		<Container fluid className={`mobile-nav ${menuIsOpen ? 'show' : ''}`}>
 			<Button className='mobile-nav__close-btn' onClick={handleClose}>
 				<span>&#x2715;</span>
 			</Button>
