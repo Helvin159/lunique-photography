@@ -248,7 +248,8 @@ blockquote {
           width: auto; }
           @media (max-width: 768px) {
             .footer__content__links__container .col-md-5 form {
-              text-align: center; } }
+              text-align: center;
+              width: 100%; } }
           .footer__content__links__container .col-md-5 form input {
             display: block;
             margin: 0 auto;
@@ -261,7 +262,8 @@ blockquote {
             margin: 0 0 1rem; }
             @media (max-width: 768px) {
               .footer__content__links__container .col-md-5 form input {
-                margin: 0 auto 1rem; } }
+                margin: 0 auto 1rem;
+                width: 100%; } }
           .footer__content__links__container .col-md-5 form textarea {
             display: block;
             padding: 0.85rem;
@@ -277,7 +279,8 @@ blockquote {
             min-height: 100px; }
             @media (max-width: 768px) {
               .footer__content__links__container .col-md-5 form textarea {
-                margin: 0 auto 1rem; } }
+                margin: 0 auto 1rem;
+                width: 100%; } }
           .footer__content__links__container .col-md-5 form button,
           .footer__content__links__container .col-md-5 form .btn {
             color: var(--variant-one);
@@ -301,6 +304,10 @@ blockquote {
               border: 1px solid var(--variant-two);
               outline: 0;
               box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+            @media (max-width: 768px) {
+              .footer__content__links__container .col-md-5 form button,
+              .footer__content__links__container .col-md-5 form .btn {
+                width: 100%; } }
     .footer__content__statement {
       margin: 0 auto;
       text-align: center;

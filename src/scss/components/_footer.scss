@@ -89,6 +89,7 @@
 
 						@media (max-width: 768px) {
 							text-align: center;
+							width: 100%;
 						}
 						& input {
 							@include text-input;
@@ -96,6 +97,7 @@
 
 							@media (max-width: 768px) {
 								margin: 0 auto 1rem;
+								width: 100%;
 							}
 						}
 
@@ -108,6 +110,7 @@
 
 							@media (max-width: 768px) {
 								margin: 0 auto 1rem;
+								width: 100%;
 							}
 						}
 
@@ -116,6 +119,9 @@
 							@include primary-btn-dark;
 							margin: 1rem auto 0;
 							width: 70%;
+							@media (max-width: 768px) {
+								width: 100%;
+							}
 						}
 					}
 				}
