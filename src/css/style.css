@@ -109,7 +109,7 @@ blockquote {
     @media (max-width: 768px) {
       .header__content__nav {
         display: none; } }
-  @media (min-width: 768px) {
+  @media (min-width: 768.05px) {
     .header__open-mobile-nav {
       display: none; } }
   .header__open-mobile-nav button,
@@ -483,6 +483,12 @@ blockquote {
   background-color: var(--variant-one);
   padding: 2rem 4rem;
   max-width: 1250px; }
+  @media (max-width: 768px) {
+    .about-hero {
+      padding: 0 3rem; } }
+  @media (max-width: 575.5px) {
+    .about-hero {
+      padding: 2rem; } }
   .about-hero__header {
     padding: 0 0 1.5rem; }
     .about-hero__header h1 {
@@ -494,6 +500,12 @@ blockquote {
   background-color: var(--variant-one);
   padding: 0 4rem;
   max-width: 1250px; }
+  @media (max-width: 768px) {
+    .about-body {
+      padding: 0 3rem; } }
+  @media (max-width: 575.5px) {
+    .about-body {
+      padding: 0 2rem; } }
 
 .featured-works {
   max-width: 1250px;
@@ -660,10 +672,10 @@ blockquote {
       -o-object-position: center;
       border-radius: 25px;
       width: 100%;
-      height: 100%;
+      height: 97.5%;
       max-height: 999px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); }
-      @media (max-width: 768px) {
+      @media (max-width: 575.5px) {
         .projects__gallery__first__content__item.col-md-4 a img {
           max-height: 300px;
           margin: 0.5rem auto; } }
@@ -922,11 +934,21 @@ blockquote {
 
 .favorites-slider {
   max-height: 500px; }
+  @media (max-width: 768px) {
+    .favorites-slider {
+      max-height: 300px;
+      padding: 0;
+      width: 100%; } }
   .favorites-slider__item {
     max-height: 500px;
     height: 100%;
     width: 100%;
     margin: 0 auto; }
+    @media (max-width: 768px) {
+      .favorites-slider__item {
+        max-height: 300px;
+        padding: 0;
+        width: 100%; } }
     .favorites-slider__item__content {
       width: 100%;
       height: 100%;
@@ -940,3 +962,6 @@ blockquote {
         object-position: center;
         -o-object-fit: cover;
         -o-object-position: center; }
+        @media (max-width: 768px) {
+          .favorites-slider__item__content img {
+            max-height: 300px; } }

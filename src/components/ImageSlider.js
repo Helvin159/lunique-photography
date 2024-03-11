@@ -19,13 +19,26 @@ const ImageSlider = ({ pictures }) => {
 		className: 'favorites-slider',
 		swipeToSlide: true,
 		swipe: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					centerMode: false,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: false,
+					arrows: false,
+				},
+			},
+		],
 	};
 
 	return (
 		<Slider {...settings}>
 			{pictures?.map((i) => (
-				<Container className='favorites-slider__item'>
-					<Container className='favorites-slider__item__content'>
+				<Container fluid className='favorites-slider__item' key={i.sys.id}>
+					<Container fluid className='favorites-slider__item__content'>
 						<img
 							loading='lazy'
 							src={`https:${i?.fields.file.url}`}

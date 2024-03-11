@@ -1,10 +1,22 @@
 .favorites-slider {
 	max-height: 500px;
+
+	@media (max-width: 768px) {
+		max-height: 300px;
+		padding: 0;
+		width: 100%;
+	}
 	&__item {
 		max-height: 500px;
 		height: 100%;
 		width: 100%;
 		margin: 0 auto;
+
+		@media (max-width: 768px) {
+			max-height: 300px;
+			padding: 0;
+			width: 100%;
+		}
 
 		&__content {
 			width: 100%;
@@ -20,6 +32,10 @@
 				object-position: center;
 				-o-object-fit: cover;
 				-o-object-position: center;
+
+				@media (max-width: 768px) {
+					max-height: 300px;
+				}
 			}
 		}
 	}

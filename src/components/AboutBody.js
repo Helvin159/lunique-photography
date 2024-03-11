@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -17,7 +16,6 @@ const AboutBody = ({ photographer }) => {
 						<div className='px-0 pb-5 px-lg-4'>
 							{documentToReactComponents(photographer?.fields.bio)}
 						</div>
-						<Link className='d-sm-none'>About Me </Link>
 					</Container>
 				</Col>
 			</Row>
