@@ -63,7 +63,7 @@ const HomeHero = () => {
 				</Row>
 			</Container>
 
-			<Container fluid className='home-hero__fav-pics px-2 px-sm-4 pb-5'>
+			<Container fluid className='home-hero__fav-pics px-4 pb-5'>
 				<Row>
 					{photographer?.fields?.favoriteShots?.slice(0, 3).map((i) => {
 						return (
