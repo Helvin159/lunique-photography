@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Container from 'react-bootstrap/Container';
-import ImageSlider from './ImageSlider';
-import ProjectGallery from './ProjectGallery';
 
 const ProjectFeatured = ({ project }) => {
 	const [date, setDate] = useState('Jan 27th, 2001');
