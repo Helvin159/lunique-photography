@@ -9,12 +9,14 @@ import Projects from './routes/Projects';
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
 import './css/style.css'; // Custom CSS
+import Gallery from './routes/Gallery';
 
 function App() {
 	return (
 		<Routes>
 			<Route path='/' element={<Outlet />}>
 				<Route index element={<Home />} />
+				<Route path='/gallery' element={<Gallery />} />
 				<Route path='/about-me' element={<About />} />
 				<Route path='/contact' element={<Contact />} />
 

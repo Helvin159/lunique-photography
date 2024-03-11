@@ -26,15 +26,15 @@ const Header = () => {
 						<Link to={'/'}>Lunique Photography</Link>
 					</h2>
 				</Col>
-				<Col md={5} className='header__content__nav'>
+				<Col md={6} className='header__content__nav'>
 					<nav>
 						<ul>
 							<li>
 								<Link to={'/projects'}>Projects</Link>
 							</li>
-							{/* <li>
-								<Link>Gallery</Link>
-							</li> */}
+							<li>
+								<Link to={'/gallery'}>Gallery</Link>
+							</li>
 							<li>
 								<Link to={'/about-me'}>About</Link>
 							</li>

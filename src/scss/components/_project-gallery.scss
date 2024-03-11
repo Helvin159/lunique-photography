@@ -1,0 +1,12 @@
+.project-gallery {
+	background-color: var(--variant-one);
+	padding: 2rem 4rem;
+	max-width: 1250px;
+
+	@media (max-width: 768px) {
+		padding: 1rem 3rem;
+	}
+	@media (max-width: 575.5px) {
+		padding: 1rem 2rem;
+	}
+}
