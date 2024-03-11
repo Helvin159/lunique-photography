@@ -19,6 +19,8 @@ const ImageSlider = ({ pictures }) => {
 		draggable: false,
 		swipeToSlide: false,
 		swipe: false,
+		easing: 'ease-in',
+		fade: true,
 		responsive: [
 			{
 				breakpoint: 992,
@@ -46,10 +48,13 @@ const ImageSlider = ({ pictures }) => {
 					slidesToShow: 1,
 					centerMode: false,
 					slidesToScroll: 1,
+					swipe: true,
+					swipeToSlide: true,
 					infinite: true,
 					dots: false,
 					arrows: false,
 					draggable: true,
+					touchMove: true,
 				},
 			},
 		],
