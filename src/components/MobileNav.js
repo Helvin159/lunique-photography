@@ -24,9 +24,9 @@ const MobileNav = () => {
 				<li>
 					<Link to={'/projects'}>Projects</Link>
 				</li>
-				{/* <li>
-								<Link>Gallery</Link>
-							</li> */}
+				<li>
+					<Link to={'/gallery'}>Gallery</Link>
+				</li>
 				<li>
 					<Link to={'/about-me'}>About</Link>
 				</li>
