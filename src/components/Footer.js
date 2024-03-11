@@ -43,9 +43,9 @@ const Footer = () => {
 						</Col>
 						<Col md={5}>
 							<ul>
-								{footerSocialMedia?.map((i, k) => {
+								{footerSocialMedia?.map((i) => {
 									return (
-										<li key={k}>
+										<li key={i?.sys?.id}>
 											<a
 												href={`${i.fields.url}`}
 												target='_blank'

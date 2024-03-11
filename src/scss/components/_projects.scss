@@ -92,7 +92,7 @@
 
 							@media (max-width: 768px) {
 								margin: 0.5rem auto;
-								max-height: 300px;
+								height: 237.74px;
 							}
 
 							&:active {
@@ -123,7 +123,7 @@
 									-o-object-position: center;
 
 									@media (max-width: 768px) {
-										height: 300px;
+										height: 237.74px;
 										margin: 0.5rem auto;
 									}
 
@@ -160,9 +160,9 @@
 							max-height: 999px;
 							box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 
-							@media (max-width: 575.5px) {
-								max-height: 300px;
+							@media (max-width: 768px) {
 								margin: 0.5rem auto;
+								height: 237.74px;
 							}
 
 							&:active {
@@ -198,9 +198,8 @@
 				box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 
 				@media (max-width: 768px) {
-					max-height: 300px;
-
 					margin: 0.5rem auto;
+					height: 237.74px;
 				}
 
 				&:active {

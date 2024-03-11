@@ -36,7 +36,7 @@ const HomeHero = () => {
 					</Col>
 					<Col
 						lg={7}
-						className='home-hero__about__img mb-3 mb-lg-0 px-0 px-lg-2'>
+						className='home-hero__about__img mb-3 mb-lg-0 px-0 px-md-2'>
 						<img
 							loading='lazy'
 							className='img-fluid'
@@ -65,9 +65,9 @@ const HomeHero = () => {
 
 			<Container fluid className='home-hero__fav-pics px-2 px-sm-4 pb-5'>
 				<Row>
-					{photographer?.fields?.favoriteShots?.slice(0, 3).map((i, k) => {
+					{photographer?.fields?.favoriteShots?.slice(0, 3).map((i) => {
 						return (
-							<Col xs={12} sm={4} key={k}>
+							<Col xs={12} sm={4} key={i?.sys?.id}>
 								<img
 									loading='lazy'
 									src={`https:${i?.fields.file.url}`}

@@ -44,7 +44,7 @@ const ProjectFeatured = ({ project }) => {
 				</Container>
 			)}
 			{project?.fields?.projectInformationOrStory && (
-				<Container className='project-featured__description mx-auto p-5'>
+				<Container className='project-featured__description mx-auto py-4 py-md-5 px-1 px-md-5'>
 					{documentToReactComponents(
 						project?.fields?.projectInformationOrStory
 					)}

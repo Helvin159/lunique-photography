@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react';
+import React, { Fragment, useContext, useEffect, useState } from 'react';
 import { ProjectsContext } from '../context/ProjectsContext';
 import { PhotographerContext } from '../context/PhotographerContext';
 import HomeHero from '../components/HomeHero';
@@ -9,8 +9,6 @@ import Loading from '../components/Loading';
 const Home = () => {
 	const { projects } = useContext(ProjectsContext);
 	const { photographer } = useContext(PhotographerContext);
-
-	console.log(document.readyState);
 
 	if (!projects) return <Loading />;
 

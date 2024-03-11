@@ -12,12 +12,26 @@
 			color: var(--variant-one);
 
 			@include heading-three-queries;
+
+			@media (max-width: 505px) {
+				line-height: 60px;
+				margin-bottom: 2rem;
+			}
+			@media (min-width: 576px) and (max-width: 590px) {
+				line-height: 60px;
+				margin-bottom: 2rem;
+			}
 		}
 	}
 	&__content {
 		&__item {
+			border-radius: 15px;
+			padding: 2.3rem 2rem;
+			margin: 0 auto 1.5rem;
+
 			&__copy {
 				justify-content: space-between;
+				align-items: center;
 
 				&.flex-row-reverse {
 					& p {

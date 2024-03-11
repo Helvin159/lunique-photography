@@ -188,14 +188,14 @@ const ProjectsGallery = ({ projects }) => {
 				{pathname !== '/' && (
 					<Container fluid className='projects__page-btns text-center'>
 						{currentPage > 1 && <Button onClick={prevPage}>Previous</Button>}
-						{pageNums.map((i, k) => (
+						{pageNums.map((i) => (
 							<Button
 								onClick={() => switchByPageNum(parseInt(i))}
 								value={parseInt(i)}
 								className={`number-btns ${
 									i === currentPage ? 'active-page' : ''
 								} mx-1`}
-								key={k}>
+								key={i}>
 								{i}
 							</Button>
 						))}

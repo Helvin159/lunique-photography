@@ -61,7 +61,7 @@ const ImageSlider = ({ pictures }) => {
 		return (
 			<Slider {...settings}>
 				{pictures?.map((i) => (
-					<Container fluid className='favorites-slider__item' key={i.sys.id}>
+					<Container fluid className='favorites-slider__item' key={i?.sys?.id}>
 						<Container fluid className='favorites-slider__item__content'>
 							<img
 								loading='lazy'
