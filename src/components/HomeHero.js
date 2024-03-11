@@ -38,6 +38,7 @@ const HomeHero = () => {
 						lg={7}
 						className='home-hero__about__img mb-3 mb-lg-0 px-0 px-lg-2'>
 						<img
+							loading='lazy'
 							className='img-fluid'
 							src={`https:${photographer?.fields?.proPhoto?.fields?.file?.url}`}
 							alt='picone'
@@ -68,6 +69,7 @@ const HomeHero = () => {
 						return (
 							<Col xs={12} sm={4} key={k}>
 								<img
+									loading='lazy'
 									src={`https:${i?.fields.file.url}`}
 									alt={i?.fields.fileName}
 									className='img-fluid mb-2 mb-md-0'

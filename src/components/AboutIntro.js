@@ -33,6 +33,7 @@ const AboutIntro = ({ photographer }) => {
 				</Col>
 				<Col lg={7} className='home-hero__about__img mb-3 mb-lg-0 px-0 px-lg-2'>
 					<img
+						loading='lazy'
 						className='img-fluid'
 						src={`https:${photographer?.fields?.proPhoto?.fields?.file?.url}`}
 						alt='picone'

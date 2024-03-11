@@ -25,6 +25,7 @@ const Footer = () => {
 								Say hello
 								<span>
 									<img
+										loading='eager'
 										src={wavingHandIcon}
 										alt='waving hand'
 										className='img-fluid'

@@ -26,7 +26,11 @@ const ImageSlider = ({ pictures }) => {
 			{pictures?.map((i) => (
 				<Container className='favorites-slider__item'>
 					<Container className='favorites-slider__item__content'>
-						<img src={`https:${i?.fields.file.url}`} alt={i?.fields.fileName} />
+						<img
+							loading='lazy'
+							src={`https:${i?.fields.file.url}`}
+							alt={i?.fields.fileName}
+						/>
 					</Container>
 				</Container>
 			))}

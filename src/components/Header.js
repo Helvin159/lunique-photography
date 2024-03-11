@@ -49,7 +49,7 @@ const Header = () => {
 			<Container className='header__open-mobile-nav'>
 				<Button onClick={handleOpenNav}>
 					<span>
-						<img src={hamburgerIcon} alt='Close Button' />
+						<img loading='eager' src={hamburgerIcon} alt='Close Button' />
 					</span>
 				</Button>
 			</Container>

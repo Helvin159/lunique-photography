@@ -19,7 +19,7 @@ const FeaturedWorks = ({ projects }) => {
 
 						return (
 							<Container className='featured-works__content__item' key={k}>
-								<img src='' alt='' className='img-fluid' />
+								<img loading='lazy' src='' alt='' className='img-fluid' />
 								<Row
 									className={`featured-works__content__item__copy ${
 										count % 2 === 0 && 'flex-row-reverse'
