@@ -35,7 +35,7 @@ export const HeaderMenuProvider = ({ children }) => {
 
 	useEffect(() => {
 		getMenu();
-	}, []);
+	}, [menuIsOpen]);
 
 	const value = { menuIsOpen, setMenuIsOpen, headerLinks, setHeaderLinks };
 

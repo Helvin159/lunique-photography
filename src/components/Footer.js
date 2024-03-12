@@ -47,10 +47,10 @@ const Footer = () => {
 									return (
 										<li key={i?.sys?.id}>
 											<a
-												href={`${i.fields.url}`}
+												href={`${i?.fields?.url}`}
 												target='_blank'
 												rel='noreferrer'>
-												{i.fields.platform}
+												{i?.fields?.platform}
 											</a>
 										</li>
 									);

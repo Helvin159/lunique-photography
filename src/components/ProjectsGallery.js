@@ -93,12 +93,12 @@ const ProjectsGallery = ({ projects }) => {
 											<Link
 												to={
 													pathname === '/'
-														? `/projects/${page[0]?.fields.slug}`
-														: page[0]?.fields.slug
+														? `/projects/${page[0]?.fields?.slug}`
+														: page[0]?.fields?.slug
 												}>
 												<img
 													loading='lazy'
-													src={`https:${page[0]?.fields.featuredImage.fields.file.url}`}
+													src={`https:${page[0]?.fields?.featuredImage?.fields?.file?.url}`}
 													width={'100%'}
 													alt='Pic one'
 													className='img-fluid'
@@ -113,11 +113,11 @@ const ProjectsGallery = ({ projects }) => {
 											<Link
 												to={
 													pathname === '/'
-														? `/projects/${page[1]?.fields.slug}`
-														: page[1]?.fields.slug
+														? `/projects/${page[1]?.fields?.slug}`
+														: page[1]?.fields?.slug
 												}>
 												<img
-													src={`https:${page[1]?.fields.featuredImage.fields.file.url}`}
+													src={`https:${page[1]?.fields?.featuredImage?.fields?.file?.url}`}
 													width={'100%'}
 													alt='Pic Two'
 													loading='lazy'
@@ -132,13 +132,13 @@ const ProjectsGallery = ({ projects }) => {
 									<Link
 										to={
 											pathname === '/'
-												? `/projects/${page[2]?.fields.slug}`
-												: page[2]?.fields.slug
+												? `/projects/${page[2]?.fields?.slug}`
+												: page[2]?.fields?.slug
 										}>
 										<img
 											loading='lazy'
 											width={'100%'}
-											src={`https:${page[2]?.fields.featuredImage.fields.file.url}`}
+											src={`https:${page[2]?.fields?.featuredImage?.fields?.file?.url}`}
 											alt='Pic Three'
 											className='img-fluid'
 										/>
@@ -150,12 +150,12 @@ const ProjectsGallery = ({ projects }) => {
 									<Link
 										to={
 											pathname === '/'
-												? `/projects/${page[3]?.fields.slug}`
-												: page[3]?.fields.slug
+												? `/projects/${page[3]?.fields?.slug}`
+												: page[3]?.fields?.slug
 										}>
 										<img
 											loading='lazy'
-											src={`https:${page[3]?.fields.featuredImage.fields.file.url}`}
+											src={`https:${page[3]?.fields?.featuredImage?.fields?.file?.url}`}
 											alt='Pic Four'
 											width={'100%'}
 											className='img-fluid'
@@ -166,16 +166,16 @@ const ProjectsGallery = ({ projects }) => {
 						</Row>
 					</Container>
 					<Container fluid className='projects__gallery__second px-2'>
-						{page[3] && (
+						{page[4] && (
 							<Link
 								to={
 									pathname === '/'
-										? `/projects/${page[4]?.fields.slug}`
-										: page[4]?.fields.slug
+										? `/projects/${page[4]?.fields?.slug}`
+										: page[4]?.fields?.slug
 								}>
 								<img
 									loading='lazy'
-									src={`https:${page[4]?.fields.featuredImage.fields.file.url}`}
+									src={`https:${page[4]?.fields?.featuredImage?.fields?.file?.url}`}
 									alt='Pic Five'
 									width={'100%'}
 									className='img-fluid'

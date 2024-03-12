@@ -70,8 +70,8 @@ const ImageSlider = ({ pictures }) => {
 						<Container fluid className='favorites-slider__item__content'>
 							<img
 								loading='lazy'
-								src={`https:${i?.fields.file.url}`}
-								alt={i?.fields.fileName}
+								src={`https:${i?.fields?.file?.url}`}
+								alt={i?.fields?.fileName}
 							/>
 						</Container>
 					</Container>
