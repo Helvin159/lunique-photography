@@ -571,6 +571,9 @@ blockquote {
     border-radius: 15px;
     padding: 2.3rem 2rem;
     margin: 0 auto 1.5rem; }
+    @media (max-width: 575.5px) {
+      .featured-works__content__item {
+        padding: 2.3rem 0.5rem; } }
     .featured-works__content__item__copy {
       justify-content: space-between;
       align-items: center; }
@@ -855,6 +858,10 @@ blockquote {
         width: 85%;
         padding: 0.75rem 0;
         margin: 0 auto; }
+        @media (max-width: 768px) {
+          .contact-form__content__form__group,
+          .contact-form__content form__group {
+            width: 100%; } }
         .contact-form__content__form__group label,
         .contact-form__content form__group label {
           display: block;
@@ -864,6 +871,11 @@ blockquote {
           margin: 0 auto;
           text-transform: capitalize;
           padding: 0.25rem 0; }
+          @media (max-width: 768px) {
+            .contact-form__content__form__group label,
+            .contact-form__content form__group label {
+              width: 100%;
+              max-width: 31.98rem; } }
         .contact-form__content__form__group input,
         .contact-form__content form__group input {
           display: block;
@@ -874,6 +886,11 @@ blockquote {
           border: none;
           width: 70%;
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); }
+          @media (max-width: 768px) {
+            .contact-form__content__form__group input,
+            .contact-form__content form__group input {
+              width: 100%;
+              max-width: 31.98rem; } }
         .contact-form__content__form__group textarea,
         .contact-form__content form__group textarea {
           display: block;
@@ -885,6 +902,11 @@ blockquote {
           width: 70%;
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
           min-height: 160px; }
+          @media (max-width: 768px) {
+            .contact-form__content__form__group textarea,
+            .contact-form__content form__group textarea {
+              width: 100%;
+              max-width: 31.98rem; } }
     .contact-form__content__submit-btn {
       width: 100%;
       margin: 0 auto;
