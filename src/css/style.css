@@ -1048,3 +1048,36 @@ blockquote {
   @media (max-width: 575.5px) {
     .project-gallery {
       padding: 1rem 2rem; } }
+  .project-gallery__grid, .project-gallery.row {
+    display: grid;
+    gap: 1rem;
+    max-width: 1250px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px; }
+    @media (max-width: 768px) {
+      .project-gallery__grid, .project-gallery.row {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 575.5px) {
+      .project-gallery__grid, .project-gallery.row {
+        grid-template-columns: repeat(1, 1fr); } }
+    .project-gallery__grid .item.col, .project-gallery.row .item.col {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      padding: 0.5rem; }
+      .project-gallery__grid .item.col img, .project-gallery.row .item.col img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        -o-object-fit: cover;
+        -o-object-position: center;
+        border-radius: 10px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); }
+    .project-gallery__grid .item-tall.col, .project-gallery.row .item-tall.col {
+      grid-row: span 3; }
+    .project-gallery__grid .item-med.col, .project-gallery.row .item-med.col {
+      grid-row: span 2; }
+    .project-gallery__grid .item-short.col, .project-gallery.row .item-short.col {
+      grid-row: span 1; }
