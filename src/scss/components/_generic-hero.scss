@@ -1,0 +1,40 @@
+.generic-hero {
+	background-color: var(--variant-one);
+	color: var(--variant-three);
+	padding: 2.5rem 0;
+	text-align: center;
+
+	& h1 {
+		font-size: 100px;
+		font-weight: 900;
+		text-transform: uppercase;
+
+		@media (max-width: 1216px) {
+			letter-spacing: 0.4rem;
+		}
+
+		@media (max-width: 992px) {
+			font-size: 92px;
+			letter-spacing: 0.3rem;
+
+			padding: 0;
+		}
+		@media (max-width: 768px) {
+			font-size: 70px;
+			letter-spacing: 0.3rem;
+
+			padding: 0;
+		}
+		@media (max-width: 575.5px) {
+			font-size: 48px;
+			letter-spacing: 0.2rem;
+			font-weight: 700;
+			padding: 0;
+		}
+	}
+
+	& p {
+		font-size: 24px;
+		margin: 0 auto;
+	}
+}

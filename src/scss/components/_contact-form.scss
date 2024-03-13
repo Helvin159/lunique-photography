@@ -1,0 +1,84 @@
+.contact-form {
+	background-color: var(--variant-one);
+	max-width: 1250px;
+
+	&__content {
+		margin: 0 auto;
+
+		&__form,
+		& form {
+			margin: 0 auto;
+			max-width: 860px;
+			width: 100%;
+
+			&__group {
+				width: 85%;
+				padding: 0.75rem 0;
+				margin: 0 auto;
+				@media (max-width: 768px) {
+					width: 100%;
+				}
+				& label {
+					display: block;
+					font-size: 20px;
+					font-weight: 600;
+					width: 70%;
+					margin: 0 auto;
+					text-transform: capitalize;
+					padding: 0.25rem 0;
+
+					@media (max-width: 768px) {
+						width: 100%;
+						max-width: 31.98rem;
+					}
+				}
+				& input {
+					display: block;
+					margin: 0 auto;
+					padding: 0.85rem;
+					border-radius: 5px;
+					outline: none;
+					border: none;
+					width: 70%;
+					box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+
+					@media (max-width: 768px) {
+						width: 100%;
+						max-width: 31.98rem;
+					}
+				}
+
+				& textarea {
+					display: block;
+					padding: 0.85rem;
+					margin: 0 auto;
+					border-radius: 5px;
+					outline: none;
+					border: none;
+					width: 70%;
+					box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+					min-height: 160px;
+
+					@media (max-width: 768px) {
+						width: 100%;
+						max-width: 31.98rem;
+					}
+				}
+			}
+		}
+
+		&__submit-btn {
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			padding: 1rem 0;
+
+			& button,
+			& .btn {
+				@include primary-btn-dark;
+				width: 100%;
+				max-width: 31.98rem;
+			}
+		}
+	}
+}

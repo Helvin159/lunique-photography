@@ -1,0 +1,47 @@
+* {
+	box-sizing: border-box;
+	font-family: var(--global-font);
+}
+
+body {
+	margin: 0;
+	background-color: var(--variant-three);
+	padding: 3.7rem;
+
+	@media (max-width: 992px) {
+		padding: 2.7rem;
+	}
+	@media (max-width: 768px) {
+		padding: 1.7rem;
+	}
+	@media (max-width: 575.5px) {
+		padding: 1.5rem 1.05rem;
+	}
+}
+
+main {
+	margin: 0 auto;
+	max-width: 1250px;
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: var(--global-heading-font-weight);
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+blockquote {
+	padding: 1rem 0 1rem 3rem;
+}

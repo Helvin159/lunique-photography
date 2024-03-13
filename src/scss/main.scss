@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+	// Font Family
+	--global-font: 'Poppins', sans-serif;
+	--global-font-weight: 400;
+	--global-heading-font-weight: 600;
+	--global-font-style: normal;
+
+	// Colors
+	--variant-one: #cfc1ae;
+	--variant-two: #141414;
+	--variant-two-light: rgb(20, 20, 20, 0.8);
+	--variant-three: #000000;
+
+	// Sizing
+	--body-padding-x: 3rem;
+	--body-padding-y: 3rem;
+}
+
+// Mixins
+@import './mixins/buttons';
+@import './mixins/heading-queries';
+@import './mixins/inputs';
+
+// Base
+@import './base/base';
+
+// Components
+@import './components/header';
+@import './components/footer';
+@import './components/home-hero';
+@import './components/about-me';
+@import './components/featured-words';
+@import './components/projects';
+@import './components/loading';
+@import './components/generic-hero';
+@import './components/contact-form';
+@import './components/mobile-nav';
+@import './components/favorites-slider';
+@import './components/project-featured';
+@import './components/project-gallery';

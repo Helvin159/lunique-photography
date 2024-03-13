@@ -1,0 +1,12 @@
+.project-featured {
+	background-color: var(--variant-one);
+	color: var(--variant-two);
+	padding: 1rem 4rem;
+
+	@media (max-width: 768px) {
+		padding: 1rem 3rem;
+	}
+	@media (max-width: 575.5px) {
+		padding: 1rem 2rem;
+	}
+}
