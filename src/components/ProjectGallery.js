@@ -1,24 +1,39 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import Container from 'react-bootstrap/Container';
 
 const ProjectGallery = ({ pictures }) => {
+	const handleClick = (e) => console.log(e.target.dataset.index);
 	return (
 		<Container as='section' fluid className='project-gallery'>
-			<Row>
-				{pictures?.map((i) => {
+			<Row className='project-gallery__grid'>
+				{pictures?.map((i, k) => {
 					if (!i?.fields?.file?.url) return null;
 
-					if (i?.fields?.file?.url)
+					if (i?.fields?.file?.url) {
+						const { height, width } = i?.fields?.file?.details?.image;
+
 						return (
-							<Col md={4} className='my-1' key={i?.sys?.id}>
+							<Col
+								className={`project-gallery__grid__content item ${
+									height > width
+										? 'item-tall'
+										: height < width
+										? 'item-short'
+										: 'item-med'
+								}`}
+								key={i?.sys?.id}
+								onClick={handleClick}>
 								<img
 									src={`https:${i?.fields?.file?.url}`}
+									data-index={k}
 									alt={i?.fields?.title}
-									className='img-fluid'
 								/>
 							</Col>
 						);
+					}
 
 					return null;
 				})}

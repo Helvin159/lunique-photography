@@ -162,7 +162,8 @@
 
 							@media (max-width: 768px) {
 								margin: 0.5rem auto;
-								height: 237.74px;
+								min-height: 237.74px;
+								height: 100%;
 							}
 
 							&:active {

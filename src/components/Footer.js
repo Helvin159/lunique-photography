@@ -1,5 +1,6 @@
 import React, { useContext, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import { handleNewMessage } from '../utilities/utils';
 import { FooterMenuContext } from '../context/FooterContext';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -35,9 +36,30 @@ const Footer = () => {
 
 							{!pathname.includes('contact') && (
 								<form ref={form}>
-									<input type='email' placeholder='Email' required />
-									<textarea placeholder='Leave me a message' />
-									<Button>Send</Button>
+									<input
+										type='email'
+										name='email'
+										id='footerEmail'
+										placeholder='Email'
+										required
+									/>
+									<textarea
+										name='message'
+										id='footerMessage'
+										placeholder='Leave me a message'
+									/>
+									<Button
+										onClick={() => {
+											console.log(form);
+											handleNewMessage(
+												form.current[0]?.value.toString(),
+												form.current[0]?.value.toString(),
+												form.current[1].value.toString(),
+												form
+											);
+										}}>
+										Send
+									</Button>
 								</form>
 							)}
 						</Col>

@@ -1,14 +1,10 @@
 import React, { useRef } from 'react';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import { handleNewMessage } from '../utilities/utils';
 
 const ContactForm = () => {
 	const form = useRef();
-
-	const handleOnClick = (e) => {
-		e.preventDefault();
-		console.log(form);
-	};
 
 	return (
 		<Container as='section' fluid className='contact-form'>
@@ -42,10 +38,20 @@ const ContactForm = () => {
 							placeholder='Leave me a message here.'
 						/>
 					</Container>
+					<Container className='contact-form__content__submit-btn'>
+						<Button
+							onClick={() =>
+								handleNewMessage(
+									form.current[0]?.value,
+									form.current[1]?.value,
+									form.current[2]?.value,
+									form
+								)
+							}>
+							Send
+						</Button>
+					</Container>
 				</form>
-				<Container className='contact-form__content__submit-btn'>
-					<Button onClick={handleOnClick}>Send</Button>
-				</Container>
 			</Container>
 		</Container>
 	);
