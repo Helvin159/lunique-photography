@@ -15,7 +15,7 @@ export const sendEmail = (name, email, message) => {
 	let msg = `${message ? message : 'No message.'}`;
 
 	let templateParams = {
-		from_name: name.toString().toUpperCase(),
+		from_name: name[0].toString().toUpperCase() + name.slice(1),
 		from_email: email,
 		message: msg,
 	};
@@ -84,7 +84,7 @@ export const handleNewMessage = async (name, email, message, ref) => {
 			console.log(entry, 'success');
 			console.log(ref);
 			sendEmail(name, email, message);
-			ref.current.reset();
+			// ref.current.reset();
 		})
 		.catch(console.error, 'error');
 };
