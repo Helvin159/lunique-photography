@@ -15,7 +15,7 @@ export const sendEmail = (name, email, message) => {
 	let msg = `${message ? message : 'No message.'}`;
 
 	let templateParams = {
-		from_name: name,
+		from_name: name.toString().toUpperCase(),
 		from_email: email,
 		message: msg,
 	};
