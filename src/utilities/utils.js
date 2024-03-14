@@ -12,9 +12,7 @@ export const paginate = (array, pageSize, pageNumber) => {
 export const pathName = window.location.pathname;
 
 export const sendEmail = (name, email, message) => {
-	let msg = `
-		Message from ${name}:
-		${message ? message : 'No message.'}`;
+	let msg = `${message ? message : 'No message.'}`;
 
 	let templateParams = {
 		from_name: name,
