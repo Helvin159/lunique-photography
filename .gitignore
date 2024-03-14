@@ -25,4 +25,6 @@ yarn-error.log*
 ui
 
 .env
-/.env
+./.env
+
+env
