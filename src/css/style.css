@@ -717,7 +717,8 @@ blockquote {
       @media (max-width: 768px) {
         .projects__gallery__first__content__item.col-md-4 a img {
           margin: 0.5rem auto;
-          height: 237.74px; } }
+          min-height: 237.74px;
+          height: 100%; } }
       .projects__gallery__first__content__item.col-md-4 a img:active {
         transform: scale(0.99);
         box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);

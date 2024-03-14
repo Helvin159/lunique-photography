@@ -19,7 +19,7 @@ export const ProjectsProvider = ({ children }) => {
 		});
 
 		const projectsRes = await client.getEntries({
-			content_type: 'projects',
+			content_type: process.env.REACT_APP_CONTENTFUL_PROJECTS_CONTENT_TYPE,
 		});
 
 		let projectImages = [];
