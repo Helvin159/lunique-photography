@@ -45,3 +45,21 @@ a {
 blockquote {
 	padding: 1rem 0 1rem 3rem;
 }
+
+.email-error-message {
+	color: darkred;
+	font-weight: 400;
+	font-size: 1rem;
+	margin: 0 0 1.7rem;
+	line-height: 0;
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+	transition: opacity 0.2s ease-in;
+
+	&.show {
+		opacity: 1;
+		visibility: visible;
+		display: block;
+	}
+}

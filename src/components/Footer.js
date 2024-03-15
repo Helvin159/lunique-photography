@@ -1,6 +1,6 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { handleNewMessage } from '../utilities/utils';
+import { emailRegex, handleNewMessage } from '../utilities/utils';
 import { FooterMenuContext } from '../context/FooterContext';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -10,11 +10,46 @@ import Button from 'react-bootstrap/Button';
 import wavingHandIcon from '../assets/svg/icon-waving-hand.svg';
 
 const Footer = () => {
+	const [name, setName] = useState('');
+
+	const [showEmailError, setShowEmailError] = useState(false);
 	const { footerSocialMedia, footerStatement, footerContactEmail } =
 		useContext(FooterMenuContext);
 	const { pathname } = useLocation();
 
 	const form = useRef();
+
+	const handleEmailChange = () => {
+		setName(document.getElementById('footerEmail').value);
+
+		if (
+			!emailRegex.test(document.getElementById('footerEmail').value) ||
+			null ||
+			''
+		) {
+			setShowEmailError(true);
+		} else {
+			setShowEmailError(false);
+		}
+	};
+
+	const handleOnClick = () => {
+		const { current } = form;
+
+		if (current[0].value !== null) {
+			if (
+				emailRegex.test(current[0].value) ||
+				current[0].value !== ('' || null)
+			) {
+				handleNewMessage(
+					current[0]?.value.toString(),
+					current[1]?.value.toString(),
+					current[2].value.toString(),
+					form
+				);
+			}
+		}
+	};
 
 	return (
 		<footer className='footer'>
@@ -42,24 +77,30 @@ const Footer = () => {
 										id='footerEmail'
 										placeholder='Email'
 										required
+										onChange={handleEmailChange}
+									/>
+
+									<p
+										className={`email-error-message ${
+											showEmailError ? 'show' : ''
+										}`}>
+										Email is invalid. Please enter correct email!
+									</p>
+
+									<input
+										type='text'
+										id='footerName'
+										name='name'
+										hidden
+										value={name}
+										onChange={() => null}
 									/>
 									<textarea
 										name='message'
 										id='footerMessage'
 										placeholder='Leave me a message'
 									/>
-									<Button
-										onClick={() => {
-											console.log(form);
-											handleNewMessage(
-												form.current[0]?.value.toString(),
-												form.current[0]?.value.toString(),
-												form.current[1].value.toString(),
-												form
-											);
-										}}>
-										Send
-									</Button>
+									<Button onClick={handleOnClick}>Send</Button>
 								</form>
 							)}
 						</Col>

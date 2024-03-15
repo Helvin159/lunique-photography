@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Container } from 'react-bootstrap';
 
-const ImageSlider = ({ pictures }) => {
+const ImageSlider = ({ pictures, slidesToShow }) => {
 	var settings = {
 		className: 'favorites-slider',
 		dots: true,
@@ -20,7 +20,6 @@ const ImageSlider = ({ pictures }) => {
 		swipeToSlide: false,
 		swipe: false,
 		easing: 'ease-in',
-		fade: true,
 		responsive: [
 			{
 				breakpoint: 992,
@@ -55,6 +54,7 @@ const ImageSlider = ({ pictures }) => {
 					arrows: false,
 					draggable: true,
 					touchMove: true,
+					fade: true,
 				},
 			},
 		],

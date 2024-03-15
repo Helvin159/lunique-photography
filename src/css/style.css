@@ -50,6 +50,21 @@ a {
 blockquote {
   padding: 1rem 0 1rem 3rem; }
 
+.email-error-message {
+  color: darkred;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0 0 1.7rem;
+  line-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  transition: opacity 0.2s ease-in; }
+  .email-error-message.show {
+    opacity: 1;
+    visibility: visible;
+    display: block; }
+
 .header {
   padding: 1.8rem 2.6rem;
   max-width: 1250px;
@@ -1061,8 +1076,11 @@ blockquote {
     gap: 1rem;
     max-width: 1250px;
     margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 200px; }
+    @media (max-width: 1175px) {
+      .project-gallery__grid, .project-gallery.row {
+        grid-template-columns: repeat(3, 1fr); } }
     @media (max-width: 768px) {
       .project-gallery__grid, .project-gallery.row {
         grid-template-columns: repeat(2, 1fr); } }

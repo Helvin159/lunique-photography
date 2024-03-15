@@ -11,7 +11,7 @@ export const paginate = (array, pageSize, pageNumber) => {
 
 export const pathName = window.location.pathname;
 
-export const sendEmail = (name, email, message) => {
+export const sendEmail = (name, email, message, ref) => {
 	let msg = `${message ? message : 'No message.'}`;
 
 	let templateParams = {
@@ -48,11 +48,12 @@ export const sendEmail = (name, email, message) => {
 		.then(
 			(res) => {
 				console.log('SUCCESS!', res.status, res.text);
-				alert('Message sent');
+				return 'success';
+				// alert('Message sent');
 			},
 			(err) => {
 				console.log('FAILED...', err);
-				alert('Message failed, please try again...');
+				// alert('Message failed, please try again...');
 			}
 		);
 	// }
@@ -83,8 +84,11 @@ export const handleNewMessage = async (name, email, message, ref) => {
 		.then((entry) => {
 			console.log(entry, 'success');
 			console.log(ref);
+
 			sendEmail(name, email, message);
-			// ref.current.reset();
+			setTimeout(() => {
+				ref.current.reset();
+			}, 1000);
 		})
 		.catch(console.error, 'error');
 };
