@@ -14,7 +14,7 @@ const Footer = () => {
 	const [name, setName] = useState('');
 
 	const [showEmailError, setShowEmailError] = useState(false);
-	const { footerSocialMedia, footerStatement, footerContactEmail } =
+	const { footerSocialMedia, footerContactEmail } =
 		useContext(FooterMenuContext);
 	const { siteDetails } = useContext(SiteDetailsContext);
 	const { pathname } = useLocation();
