@@ -72,6 +72,24 @@ blockquote {
     margin: 0 0 1.7rem;
     font-size: 1rem; } }
 
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: bottom; }
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: top; }
+
 .header {
   padding: 1.8rem 2.6rem;
   max-width: 1250px;
