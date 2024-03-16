@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { emailRegex, handleNewMessage } from '../utilities/utils';
 import { FooterMenuContext } from '../context/FooterContext';
 import Container from 'react-bootstrap/Container';
@@ -14,10 +14,15 @@ const Footer = () => {
 	const [name, setName] = useState('');
 
 	const [showEmailError, setShowEmailError] = useState(false);
+
 	const { footerSocialMedia, footerContactEmail } =
 		useContext(FooterMenuContext);
+
 	const { siteDetails } = useContext(SiteDetailsContext);
+
 	const { pathname } = useLocation();
+
+	const navigate = useNavigate();
 
 	const form = useRef();
 
@@ -47,7 +52,9 @@ const Footer = () => {
 					current[0]?.value.toString(),
 					current[1]?.value.toString(),
 					current[2].value.toString(),
-					form
+					form,
+					navigate,
+					pathname
 				);
 			}
 		}

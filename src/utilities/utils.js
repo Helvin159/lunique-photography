@@ -59,7 +59,14 @@ export const sendEmail = (name, email, message, ref) => {
 	// }
 };
 
-export const handleNewMessage = async (name, email, message, ref) => {
+export const handleNewMessage = async (
+	name,
+	email,
+	message,
+	ref,
+	navigate,
+	pathname
+) => {
 	const client = createClient({
 		accessToken: process.env.REACT_APP_CONTENTFUL_CMA_TOKEN_KEY,
 	});
@@ -88,6 +95,10 @@ export const handleNewMessage = async (name, email, message, ref) => {
 			sendEmail(name, email, message);
 			setTimeout(() => {
 				ref.current.reset();
+
+				if (navigate && pathname && pathname !== '/') {
+					navigate('/');
+				}
 			}, 1000);
 		})
 		.catch(console.error, 'error');

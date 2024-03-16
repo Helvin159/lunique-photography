@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import { emailRegex, handleNewMessage } from '../utilities/utils';
@@ -18,6 +19,9 @@ const ContactForm = () => {
 			setShowEmailError(false);
 		}
 	};
+
+	const navigate = useNavigate();
+	const { pathname } = useLocation();
 
 	return (
 		<Container as='section' fluid className='contact-form'>
@@ -65,7 +69,9 @@ const ContactForm = () => {
 									form.current[0]?.value,
 									form.current[1]?.value,
 									form.current[2]?.value,
-									form
+									form,
+									navigate,
+									pathname
 								)
 							}>
 							Send

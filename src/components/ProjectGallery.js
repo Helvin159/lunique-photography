@@ -29,7 +29,7 @@ const ProjectGallery = ({ pictures }) => {
 								<img
 									draggable={false}
 									src={`https:${i?.fields?.file?.url}`}
-									data-index={k}
+									data-index={pictures.indexOf(i)}
 									alt={i?.fields?.title}
 								/>
 							</Col>
