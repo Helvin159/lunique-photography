@@ -97,6 +97,7 @@ const ProjectsGallery = ({ projects }) => {
 														: page[0]?.fields?.slug
 												}>
 												<img
+													draggable={false}
 													loading='lazy'
 													src={`https:${page[0]?.fields?.featuredImage?.fields?.file?.url}`}
 													width={'100%'}
@@ -117,6 +118,7 @@ const ProjectsGallery = ({ projects }) => {
 														: page[1]?.fields?.slug
 												}>
 												<img
+													draggable={false}
 													src={`https:${page[1]?.fields?.featuredImage?.fields?.file?.url}`}
 													width={'100%'}
 													alt='Pic Two'
@@ -136,6 +138,7 @@ const ProjectsGallery = ({ projects }) => {
 												: page[2]?.fields?.slug
 										}>
 										<img
+											draggable={false}
 											loading='lazy'
 											width={'100%'}
 											src={`https:${page[2]?.fields?.featuredImage?.fields?.file?.url}`}
@@ -154,6 +157,7 @@ const ProjectsGallery = ({ projects }) => {
 												: page[3]?.fields?.slug
 										}>
 										<img
+											draggable={false}
 											loading='lazy'
 											src={`https:${page[3]?.fields?.featuredImage?.fields?.file?.url}`}
 											alt='Pic Four'
@@ -174,6 +178,7 @@ const ProjectsGallery = ({ projects }) => {
 										: page[4]?.fields?.slug
 								}>
 								<img
+									draggable={false}
 									loading='lazy'
 									src={`https:${page[4]?.fields?.featuredImage?.fields?.file?.url}`}
 									alt='Pic Five'

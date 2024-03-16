@@ -28,9 +28,23 @@
 			border-radius: 15px;
 			padding: 2.3rem 2rem;
 			margin: 0 auto 1.5rem;
+			transition: 0.3s ease-out;
+
+			@media (min-width: 575.5px) {
+				&:hover {
+					transition: padding 0.3s ease-in-out;
+					padding: 7rem 2rem;
+				}
+			}
 
 			@media (max-width: 575.5px) {
 				padding: 2.3rem 0.5rem;
+
+				// &:active,
+				&:hover {
+					padding: 7rem 2rem;
+					text-align: center;
+				}
 			}
 
 			&__copy {

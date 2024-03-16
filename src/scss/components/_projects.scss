@@ -162,9 +162,11 @@
 
 							@media (max-width: 768px) {
 								margin: 0.5rem auto;
-								max-height: 237.74px;
-
 								height: 97%;
+							}
+
+							@media (max-width: 767.9px) {
+								max-height: 237.74px;
 							}
 
 							@media (max-width: 575.5px) {

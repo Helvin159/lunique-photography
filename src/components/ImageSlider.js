@@ -69,6 +69,7 @@ const ImageSlider = ({ pictures }) => {
 					<Container fluid className='favorites-slider__item' key={i?.sys?.id}>
 						<Container fluid className='favorites-slider__item__content'>
 							<img
+								draggable={false}
 								loading='lazy'
 								src={`https:${i?.fields?.file?.url}`}
 								alt={i?.fields?.fileName}

@@ -37,6 +37,7 @@ const ProjectFeatured = ({ project }) => {
 			{project?.fields?.featuredImage && (
 				<Container className='project-featured__featured-img mx-auto text-center'>
 					<img
+						draggable={false}
 						src={`https:${project?.fields?.featuredImage?.fields?.file?.url}`}
 						alt={project?.fields?.title}
 						className='img-fluid'

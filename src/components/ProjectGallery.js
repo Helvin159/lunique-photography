@@ -27,6 +27,7 @@ const ProjectGallery = ({ pictures }) => {
 								key={i?.sys?.id}
 								onClick={handleClick}>
 								<img
+									draggable={false}
 									src={`https:${i?.fields?.file?.url}`}
 									data-index={k}
 									alt={i?.fields?.title}

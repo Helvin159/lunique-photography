@@ -63,6 +63,7 @@ const Footer = () => {
 								Say hello
 								<span>
 									<img
+										draggable={false}
 										loading='eager'
 										src={wavingHandIcon}
 										alt='waving hand'
