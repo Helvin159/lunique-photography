@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Container } from 'react-bootstrap';
 
-const ImageSlider = ({ pictures, slidesToShow }) => {
+const ImageSlider = ({ pictures }) => {
 	var settings = {
 		className: 'favorites-slider',
 		dots: true,

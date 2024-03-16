@@ -1,10 +1,23 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import { handleNewMessage } from '../utilities/utils';
+import { emailRegex, handleNewMessage } from '../utilities/utils';
 
 const ContactForm = () => {
+	const [showEmailError, setShowEmailError] = useState(false);
 	const form = useRef();
+
+	const handleEmailChange = () => {
+		if (
+			!emailRegex.test(document.getElementById('contactEmail').value) ||
+			null ||
+			''
+		) {
+			setShowEmailError(true);
+		} else {
+			setShowEmailError(false);
+		}
+	};
 
 	return (
 		<Container as='section' fluid className='contact-form'>
@@ -28,7 +41,14 @@ const ContactForm = () => {
 							name='contactEmail'
 							id='contactEmail'
 							placeholder='Email address'
+							onChange={handleEmailChange}
 						/>
+						<p
+							className={`email-error-message text-center mt-4 mx-auto  ${
+								showEmailError ? 'show' : ''
+							}`}>
+							Email is invalid. Please enter correct email!
+						</p>
 					</Container>
 					<Container className='contact-form__content__form__group'>
 						<label htmlFor='message'>Message</label>

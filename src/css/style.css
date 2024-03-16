@@ -53,17 +53,24 @@ blockquote {
 .email-error-message {
   color: darkred;
   font-weight: 400;
-  font-size: 1rem;
-  margin: 0 0 1.7rem;
   line-height: 0;
   opacity: 0;
   visibility: hidden;
-  display: none;
-  transition: opacity 0.2s ease-in; }
+  display: none; }
   .email-error-message.show {
-    opacity: 1;
-    visibility: visible;
+    padding-left: 0.5rem;
+    animation: show-error 400ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
     display: block; }
+
+@keyframes show-error {
+  100% {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    margin: 0 0 1.7rem;
+    font-size: 1rem; } }
 
 .header {
   padding: 1.8rem 2.6rem;
