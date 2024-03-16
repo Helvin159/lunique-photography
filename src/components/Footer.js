@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 import wavingHandIcon from '../assets/svg/icon-waving-hand.svg';
+import { SiteDetailsContext } from '../context/SiteDetailsContext';
 
 const Footer = () => {
 	const [name, setName] = useState('');
@@ -15,6 +16,7 @@ const Footer = () => {
 	const [showEmailError, setShowEmailError] = useState(false);
 	const { footerSocialMedia, footerStatement, footerContactEmail } =
 		useContext(FooterMenuContext);
+	const { siteDetails } = useContext(SiteDetailsContext);
 	const { pathname } = useLocation();
 
 	const form = useRef();
@@ -123,7 +125,7 @@ const Footer = () => {
 					</Row>
 				</Container>
 				<Container className='footer__content__statement'>
-					<h3>{footerStatement}</h3>
+					<h3>{siteDetails?.fields?.businessName}</h3>
 				</Container>
 			</Container>
 		</footer>
