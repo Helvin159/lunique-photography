@@ -20,6 +20,10 @@ export const SiteDetailsProvider = ({ children }) => {
 		);
 
 		setSiteDetails(siteDetailssRes);
+
+		// Sets page title to Business Name in Site Details
+		document.querySelector('title').innerHTML =
+			siteDetailssRes?.fields?.businessName;
 	};
 
 	useEffect(() => {
