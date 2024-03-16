@@ -1,4 +1,6 @@
 import React, { useContext } from 'react';
+import { HeaderMenuContext } from '../context/HeaderMenuContext';
+import { SiteDetailsContext } from '../context/SiteDetailsContext';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -6,10 +8,11 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
 import hamburgerIcon from '../assets/svg/icon-bars.svg';
-import { HeaderMenuContext } from '../context/HeaderMenuContext';
 
 const Header = () => {
 	const { menuIsOpen, setMenuIsOpen } = useContext(HeaderMenuContext);
+
+	const { siteDetails } = useContext(SiteDetailsContext);
 
 	const handleOpenNav = (e) => {
 		e.preventDefault();
@@ -23,7 +26,11 @@ const Header = () => {
 			<Row className='header__content'>
 				<Col md={5} className='header__content__logo'>
 					<h2>
-						<Link to={'/'}>Lunique Photography</Link>
+						<Link to={'/'}>
+							{siteDetails?.fields?.businessName
+								? siteDetails?.fields?.businessName
+								: 'Lunique Photog'}
+						</Link>
 					</h2>
 				</Col>
 				<Col md={6} className='header__content__nav'>

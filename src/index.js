@@ -8,22 +8,25 @@ import { FooterMenuProvider } from './context/FooterContext';
 import ScrollToTop from './utilities/ScrollToTop';
 
 import App from './App';
+import { SiteDetailsProvider } from './context/SiteDetailsContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<PhotographerProvider>
-				<HeaderMenuProvider>
-					<FooterMenuProvider>
-						<ProjectsProvider>
-							<ScrollToTop>
-								<App />
-							</ScrollToTop>
-						</ProjectsProvider>
-					</FooterMenuProvider>
-				</HeaderMenuProvider>
-			</PhotographerProvider>
+			<SiteDetailsProvider>
+				<PhotographerProvider>
+					<HeaderMenuProvider>
+						<FooterMenuProvider>
+							<ProjectsProvider>
+								<ScrollToTop>
+									<App />
+								</ScrollToTop>
+							</ProjectsProvider>
+						</FooterMenuProvider>
+					</HeaderMenuProvider>
+				</PhotographerProvider>
+			</SiteDetailsProvider>
 		</BrowserRouter>
 	</React.StrictMode>
 );
