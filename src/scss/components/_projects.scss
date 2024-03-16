@@ -91,7 +91,6 @@
 							box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 
 							@media (max-width: 768px) {
-								margin: 0.5rem auto;
 								height: 237.74px;
 							}
 
@@ -165,6 +164,11 @@
 								min-height: 237.74px;
 								height: 100%;
 							}
+							@media (max-width: 575.5px) {
+								margin: 0.5rem auto;
+								max-height: 237.74px;
+								height: 100%;
+							}
 
 							&:active {
 								transform: scale(0.99);
@@ -201,6 +205,12 @@
 				@media (max-width: 768px) {
 					margin: 0.5rem auto;
 					height: 237.74px;
+				}
+
+				@media (max-width: 575.5px) {
+					margin: 0.5rem auto;
+					max-height: 237.74px;
+					height: 100%;
 				}
 
 				&:active {
