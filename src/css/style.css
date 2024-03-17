@@ -1026,20 +1026,35 @@ blockquote {
   transition: opacity 0.25s ease;
   z-index: -1; }
   @media (max-width: 768px) {
-    .mobile-nav.show {
-      transition: opacity 0.15s ease-in;
-      display: flex;
+    .mobile-nav.hidden {
       visibility: visible;
       opacity: 1;
-      z-index: 1; } }
+      z-index: 1;
+      display: flex;
+      animation: close-menu 0.3s ease-out;
+      animation-fill-mode: forwards; } }
+  @media (max-width: 768px) {
+    .mobile-nav.show {
+      display: flex;
+      animation: open-menu 0.15s ease-in;
+      animation-fill-mode: forwards; } }
 
 @keyframes close-menu {
   100% {
     visibility: hidden;
-    z-index: 0;
+    z-index: -1;
     opacity: 0; }
-  98% {
+  99.9% {
     opacity: 0; } }
+
+@keyframes open-menu {
+  100% {
+    visibility: visible;
+    z-index: 1;
+    opacity: 1; }
+  1% {
+    visibility: visible;
+    z-index: 1; } }
   .mobile-nav ul {
     list-style-type: none;
     padding: 0;
