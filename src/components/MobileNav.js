@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import { HeaderMenuContext } from '../context/HeaderMenuContext';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const MobileNav = () => {
 	const { menuIsOpen, setMenuIsOpen } = useContext(HeaderMenuContext);
+
+	const navigate = useNavigate();
 
 	const handleClose = (e) => {
 		e.preventDefault();
@@ -15,23 +17,45 @@ const MobileNav = () => {
 		}
 	};
 
+	const handleNav = (url) => {
+		navigate(url);
+
+		setTimeout(() => {
+			if (menuIsOpen) {
+				setMenuIsOpen(!menuIsOpen);
+			}
+		}, 500);
+	};
+
 	return (
 		<Container fluid className={`mobile-nav ${menuIsOpen ? 'show' : ''}`}>
 			<Button className='mobile-nav__close-btn' onClick={handleClose}>
 				<span>&#x2715;</span>
 			</Button>
 			<ul>
-				<li>
-					<Link to={'/projects'}>Projects</Link>
+				<li
+					onClick={() => {
+						handleNav('/projects');
+					}}>
+					<Link>Projects</Link>
 				</li>
-				<li>
-					<Link to={'/gallery'}>Gallery</Link>
+				<li
+					onClick={() => {
+						handleNav('/gallery');
+					}}>
+					<Link>Gallery</Link>
 				</li>
-				<li>
-					<Link to={'/about-me'}>About</Link>
+				<li
+					onClick={() => {
+						handleNav('/about-me');
+					}}>
+					<Link>About</Link>
 				</li>
-				<li>
-					<Link to={'/contact'}>Contact</Link>
+				<li
+					onClick={() => {
+						handleNav('/contact');
+					}}>
+					<Link>Contact</Link>
 				</li>
 			</ul>
 		</Container>

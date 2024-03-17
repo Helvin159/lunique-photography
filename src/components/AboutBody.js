@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import ImageSlider from './ImageSlider';
+import { shortParagraph } from '../utilities/genericStrings';
 
 const AboutBody = ({ photographer }) => {
 	return (
@@ -14,7 +15,14 @@ const AboutBody = ({ photographer }) => {
 					className='home-hero__about__copy-secondary__copy px-0 px-lg-2'>
 					<Container className='px-0 mx-0'>
 						<div className='px-0 pb-5 px-lg-4'>
-							{documentToReactComponents(photographer?.fields.bio)}
+							{photographer ? (
+								documentToReactComponents(photographer?.fields?.bio)
+							) : (
+								<>
+									<h1>About</h1>
+									<p>{shortParagraph}</p>
+								</>
+							)}
 						</div>
 					</Container>
 				</Col>
