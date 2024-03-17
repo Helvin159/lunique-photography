@@ -6,6 +6,7 @@
 	height: 100vh;
 	background: #0f0f0f;
 	transform-origin: bottom;
+	z-index: 10;
 }
 
 .slide-out {
@@ -16,4 +17,5 @@
 	height: 100vh;
 	background: #0f0f0f;
 	transform-origin: top;
+	z-index: 10;
 }
