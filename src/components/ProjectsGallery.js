@@ -54,7 +54,10 @@ const ProjectsGallery = ({ projects }) => {
 
 	// Switch Page by clicking on page number function
 	const switchByPageNum = (selectedPage) => {
-		window.scrollTo(0, headerEl?.top);
+		setTimeout(() => {
+			window.scrollTo(0, headerEl?.top);
+		}, 500);
+
 		setCurrentPage(selectedPage);
 		setPage(paginate(projects.items, 5, selectedPage));
 	};
