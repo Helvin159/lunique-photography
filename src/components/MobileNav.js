@@ -24,11 +24,11 @@ const MobileNav = () => {
 			if (menuIsOpen) {
 				setMenuIsOpen(!menuIsOpen);
 			}
-		}, 500);
+		}, 50);
 	};
 
 	return (
-		<Container fluid className={`mobile-nav ${menuIsOpen ? 'show' : ''}`}>
+		<Container fluid className={`mobile-nav ${menuIsOpen ? 'show' : 'hidden'}`}>
 			<Button className='mobile-nav__close-btn' onClick={handleClose}>
 				<span>&#x2715;</span>
 			</Button>

@@ -14,16 +14,32 @@
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
-	transition: 0.15s ease;
+	transition: opacity 0.25s ease;
 
-	z-index: 1;
+	z-index: -1;
 
 	&.show {
-		transition: opacity 0.15s ease-in;
 		@media (max-width: 768px) {
+			transition: opacity 0.15s ease-in;
+			display: flex;
 			visibility: visible;
 			opacity: 1;
-			display: flex;
+			z-index: 1;
+		}
+	}
+	// &.hidden {
+	// 	animation: close-menu 0.3s ease-out;
+	// 	animation-fill-mode: forwards;
+	// }
+
+	@keyframes close-menu {
+		100% {
+			visibility: hidden;
+			z-index: 0;
+			opacity: 0;
+		}
+		98% {
+			opacity: 0;
 		}
 	}
 
