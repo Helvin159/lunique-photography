@@ -1,11 +1,13 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import { emailRegex, handleNewMessage } from '../utilities/utils';
+import { ThankYouModalContext } from '../context/ThankYouModal';
 
 const ContactForm = () => {
 	const [showEmailError, setShowEmailError] = useState(false);
+	const { setTyModalIsOpen } = useContext(ThankYouModalContext);
 	const form = useRef();
 
 	const handleEmailChange = () => {
@@ -64,14 +66,16 @@ const ContactForm = () => {
 					</Container>
 					<Container className='contact-form__content__submit-btn'>
 						<Button
-							onClick={() =>
+							onClick={(e) =>
 								handleNewMessage(
 									form.current[0]?.value,
 									form.current[1]?.value,
 									form.current[2]?.value,
 									form,
 									navigate,
-									pathname
+									pathname,
+									setTyModalIsOpen,
+									e.target
 								)
 							}>
 							Send

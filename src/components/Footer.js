@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 
 import wavingHandIcon from '../assets/svg/icon-waving-hand.svg';
 import { SiteDetailsContext } from '../context/SiteDetailsContext';
+import { ThankYouModalContext } from '../context/ThankYouModal';
 
 const Footer = () => {
 	const [name, setName] = useState('');
@@ -17,6 +18,8 @@ const Footer = () => {
 
 	const { footerSocialMedia, footerContactEmail } =
 		useContext(FooterMenuContext);
+
+	const { setTyModalIsOpen } = useContext(ThankYouModalContext);
 
 	const { siteDetails } = useContext(SiteDetailsContext);
 
@@ -40,7 +43,7 @@ const Footer = () => {
 		}
 	};
 
-	const handleOnClick = () => {
+	const handleOnClick = (e) => {
 		const { current } = form;
 
 		if (current[0].value !== null) {
@@ -48,13 +51,16 @@ const Footer = () => {
 				emailRegex.test(current[0].value) ||
 				current[0].value !== ('' || null)
 			) {
+				e.target.disabled = true;
 				handleNewMessage(
 					current[0]?.value.toString(),
 					current[1]?.value.toString(),
 					current[2].value.toString(),
 					form,
 					navigate,
-					pathname
+					pathname,
+					setTyModalIsOpen,
+					e.target
 				);
 			}
 		}

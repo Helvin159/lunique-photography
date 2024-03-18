@@ -10,17 +10,11 @@
 	backdrop-filter: blur(4px);
 
 	padding: 0 4rem;
-	// display: flex;
-	// flex-direction: row;
-
-	// justify-content: center;
-	// align-items: center;
+	opacity: 0;
+	// visibility: hidden;
 
 	&.show {
 		animation: 0.3s ease-in 0.1s 1 normal forwards show-slider;
-		// animation-fill-mode: forwards;
-
-		opacity: 0;
 	}
 
 	&.hidden {
@@ -38,16 +32,11 @@
 		}
 	}
 	@keyframes close-slider {
-		5% {
-			display: block;
-		}
 		99% {
 			opacity: 0;
-			visibility: hidden;
 		}
 		100% {
 			opacity: 0;
-			display: none;
 			visibility: hidden;
 		}
 	}

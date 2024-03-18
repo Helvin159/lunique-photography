@@ -10,6 +10,7 @@ import ScrollToTop from './utilities/ScrollToTop';
 import App from './App';
 import { SiteDetailsProvider } from './context/SiteDetailsContext';
 import { GalleryProvider } from './context/GalleryContext';
+import { ThankYouModalProvider } from './context/ThankYouModal';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,9 +22,11 @@ root.render(
 						<FooterMenuProvider>
 							<ProjectsProvider>
 								<GalleryProvider>
-									<ScrollToTop>
-										<App />
-									</ScrollToTop>
+									<ThankYouModalProvider>
+										<ScrollToTop>
+											<App />
+										</ScrollToTop>
+									</ThankYouModalProvider>
 								</GalleryProvider>
 							</ProjectsProvider>
 						</FooterMenuProvider>

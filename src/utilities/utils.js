@@ -65,8 +65,11 @@ export const handleNewMessage = async (
 	message,
 	ref,
 	navigate,
-	pathname
+	pathname,
+	thankYouCtxSetter,
+	btn
 ) => {
+	btn.disabled = true;
 	const client = createClient({
 		accessToken: process.env.REACT_APP_CONTENTFUL_CMA_TOKEN_KEY,
 	});
@@ -93,13 +96,20 @@ export const handleNewMessage = async (
 			console.log(ref);
 
 			sendEmail(name, email, message);
+			thankYouCtxSetter(true);
+
 			setTimeout(() => {
 				ref.current.reset();
 
 				if (navigate && pathname && pathname !== '/') {
 					navigate('/');
 				}
-			}, 1000);
+
+				setTimeout(() => {
+					thankYouCtxSetter(false);
+					btn.disabled = false;
+				}, 1250);
+			}, 3000);
 		})
 		.catch(console.error, 'error');
 };

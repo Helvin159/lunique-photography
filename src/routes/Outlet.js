@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import MobileNav from '../components/MobileNav';
 
 import PageTransition from '../components/PageTransition';
+import ThankYouMsg from '../components/ThankYouMsg';
 
 const Outlet = () => {
 	return (
@@ -16,6 +17,7 @@ const Outlet = () => {
 				<Layout />
 				<Footer />
 			</main>
+			<ThankYouMsg />
 			<PageTransition />
 		</Fragment>
 	);
