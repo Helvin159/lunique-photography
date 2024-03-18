@@ -9,6 +9,7 @@ import ScrollToTop from './utilities/ScrollToTop';
 
 import App from './App';
 import { SiteDetailsProvider } from './context/SiteDetailsContext';
+import { GalleryProvider } from './context/GalleryContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,9 +20,11 @@ root.render(
 					<HeaderMenuProvider>
 						<FooterMenuProvider>
 							<ProjectsProvider>
-								<ScrollToTop>
-									<App />
-								</ScrollToTop>
+								<GalleryProvider>
+									<ScrollToTop>
+										<App />
+									</ScrollToTop>
+								</GalleryProvider>
 							</ProjectsProvider>
 						</FooterMenuProvider>
 					</HeaderMenuProvider>

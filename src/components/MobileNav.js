@@ -35,6 +35,12 @@ const MobileNav = () => {
 			<ul>
 				<li
 					onClick={() => {
+						handleNav('/');
+					}}>
+					<Link>Home</Link>
+				</li>
+				<li
+					onClick={() => {
 						handleNav('/projects');
 					}}>
 					<Link>Projects</Link>

@@ -11,6 +11,8 @@
 	--variant-one: #cfc1ae;
 	--variant-two: #141414;
 	--variant-two-light: rgb(20, 20, 20, 0.8);
+	--variant-two-light-med: rgb(20, 20, 20, 0.85);
+	--variant-two-med: rgb(20, 20, 20, 0.9);
 	--variant-three: #000000;
 
 	// Sizing
@@ -43,3 +45,4 @@
 @import './components/favorites-slider';
 @import './components/project-featured';
 @import './components/project-gallery';
+@import './components/gallery-slider';

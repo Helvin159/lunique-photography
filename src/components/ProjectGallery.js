@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import Container from 'react-bootstrap/Container';
+import { GalleryContext } from '../context/GalleryContext';
 
 const ProjectGallery = ({ pictures }) => {
-	const handleClick = (e) => console.log(e.target.dataset.index);
+	const { modalIsOpen, setModalIsOpen, setSlideIndex } =
+		useContext(GalleryContext);
+
+	const handleOnClick = (e) => {
+		setSlideIndex(e.target.dataset.index);
+
+		if (!modalIsOpen) {
+			setModalIsOpen(!modalIsOpen);
+		}
+	};
+
 	return (
 		<Container as='section' fluid className='project-gallery'>
 			<Row className='project-gallery__grid'>
-				{pictures?.map((i, k) => {
+				{pictures?.map((i) => {
 					if (!i?.fields?.file?.url) return null;
 
 					if (i?.fields?.file?.url) {
@@ -25,7 +36,8 @@ const ProjectGallery = ({ pictures }) => {
 										: 'item-med'
 								}`}
 								key={i?.sys?.id}
-								onClick={handleClick}>
+								data-index={pictures.indexOf(i)}
+								onClick={handleOnClick}>
 								<img
 									draggable={false}
 									src={`https:${i?.fields?.file?.url}`}

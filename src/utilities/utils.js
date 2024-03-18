@@ -103,3 +103,111 @@ export const handleNewMessage = async (
 		})
 		.catch(console.error, 'error');
 };
+
+export const gallerySliderSettings = {
+	className: 'gallery-slider-comp',
+	dots: false,
+	infinite: true,
+	autoplay: false,
+	speed: 1500,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: true,
+	centerMode: false,
+	draggable: false,
+	swipeToSlide: true,
+	swipe: true,
+	easing: 'ease-in',
+	responsive: [
+		{
+			breakpoint: 992,
+			settings: {
+				draggable: true,
+				swipeToSlide: true,
+				swipe: true,
+			},
+		},
+		{
+			breakpoint: 820,
+			settings: {
+				slidesToShow: 1,
+				centerMode: true,
+				slidesToScroll: 1,
+				infinite: true,
+				dots: false,
+				arrows: false,
+				draggable: true,
+			},
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 1,
+				centerMode: false,
+				slidesToScroll: 1,
+				swipe: true,
+				swipeToSlide: true,
+				infinite: true,
+				dots: false,
+				arrows: false,
+				draggable: true,
+				touchMove: true,
+				fade: true,
+			},
+		},
+	],
+};
+
+export const imageSliderSettings = {
+	className: 'favorites-slider',
+	dots: true,
+	infinite: true,
+	autoplay: true,
+	speed: 1000,
+	slidesToShow: 2.33,
+	slidesToScroll: 1,
+	arrows: true,
+	centerMode: true,
+	draggable: false,
+	swipeToSlide: false,
+	swipe: false,
+	easing: 'ease-in',
+	responsive: [
+		{
+			breakpoint: 992,
+			settings: {
+				draggable: true,
+				swipeToSlide: true,
+				swipe: true,
+			},
+		},
+		{
+			breakpoint: 820,
+			settings: {
+				slidesToShow: 1.33,
+				centerMode: true,
+				slidesToScroll: 1,
+				infinite: true,
+				dots: false,
+				arrows: false,
+				draggable: true,
+			},
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 1,
+				centerMode: false,
+				slidesToScroll: 1,
+				swipe: true,
+				swipeToSlide: true,
+				infinite: true,
+				dots: false,
+				arrows: false,
+				draggable: true,
+				touchMove: true,
+				fade: true,
+			},
+		},
+	],
+};
