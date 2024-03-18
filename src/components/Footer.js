@@ -13,22 +13,15 @@ import { ThankYouModalContext } from '../context/ThankYouModal';
 
 const Footer = () => {
 	const [name, setName] = useState('');
-
 	const [showEmailError, setShowEmailError] = useState(false);
-
 	const { footerSocialMedia, footerContactEmail } =
 		useContext(FooterMenuContext);
 
 	const { setTyModalIsOpen } = useContext(ThankYouModalContext);
-
 	const { siteDetails } = useContext(SiteDetailsContext);
-
 	const { pathname } = useLocation();
-
 	const navigate = useNavigate();
-
 	const form = useRef();
-
 	const handleEmailChange = () => {
 		setName(document.getElementById('footerEmail').value);
 
@@ -42,7 +35,6 @@ const Footer = () => {
 			setShowEmailError(false);
 		}
 	};
-
 	const handleOnClick = (e) => {
 		const { current } = form;
 
