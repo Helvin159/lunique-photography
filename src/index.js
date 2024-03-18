@@ -8,6 +8,7 @@ import { HeaderMenuProvider } from './context/HeaderMenuContext';
 import { FooterMenuProvider } from './context/FooterContext';
 import { GalleryProvider } from './context/GalleryContext';
 import { ThankYouModalProvider } from './context/ThankYouModal';
+
 import ScrollToTop from './utilities/ScrollToTop';
 
 import App from './App';
