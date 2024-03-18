@@ -1227,3 +1227,7 @@ blockquote {
       height: auto;
       margin: 0 auto;
       max-height: 75vh; }
+      @media (max-width: 575.5px) {
+        .gallery-slider__component__item__content img {
+          max-width: 90%;
+          max-height: 60vh; } }
